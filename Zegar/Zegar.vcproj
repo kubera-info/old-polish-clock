@@ -1,273 +1,471 @@
-<?xml version="1.0" encoding = "windows-1250"?>
+<?xml version="1.0" encoding="windows-1250"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="7.00"
+	Version="8,00"
 	Name="Zegar"
 	ProjectGUID="{34E784E9-749F-4B83-8F57-ED1C094CC8AA}"
-	Keyword="Win32Proj">
+	RootNamespace="Zegar"
+	Keyword="Win32Proj"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32"/>
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory="Debug"
 			IntermediateDirectory="Debug"
 			ConfigurationType="1"
-			CharacterSet="2">
+			InheritedPropertySheets="..\..\..\..\..\..\Program Files\Microsoft Visual Studio 8\VC\VCProjectDefaults\UpgradeFromVC70.vsprops"
+			CharacterSet="1"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				InlineFunctionExpansion="0"
-				AdditionalIncludeDirectories=""
+				AdditionalIncludeDirectories="&quot;C:\Program Files\Microsoft DirectX SDK (February 2007)\Samples\C++\DXUT\Core&quot;;./;&quot;$(InputDir)/D3D&quot;;&quot;$(InputDir)&quot;;&quot;C:\Program Files\Microsoft Platform SDK\Include&quot;;&quot;C:\Program Files\Microsoft DirectX SDK (February 2007)\Include&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
-				MinimalRebuild="TRUE"
+				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="5"
-				BufferSecurityCheck="TRUE"
-				EnableFunctionLevelLinking="TRUE"
-				UsePrecompiledHeader="2"
+				RuntimeLibrary="1"
+				BufferSecurityCheck="true"
+				EnableFunctionLevelLinking="true"
+				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				Detect64BitPortabilityProblems="TRUE"
+				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
-				CompileAs="2"/>
+				CompileAs="2"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="&quot;C:\Program Files\Microsoft Platform SDK\Include&quot;"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
 				Name="VCLinkerTool"
-				RegisterOutput="FALSE"
-				AdditionalDependencies="winmm.lib d3dx8dt.lib delayimp.lib Dxerr8.lib Comctl32.lib dxguid.lib d3d8.lib d3dx.lib ole32.lib"
+				RegisterOutput="false"
+				AdditionalDependencies="dxerr.lib dxguid.lib d3dx9.lib d3d9.lib winmm.lib comctl32.lib dxgi.lib d3d10.lib d3dx10d.lib dsound.lib user32.lib gdi32.lib Advapi32.lib shell32.lib"
 				OutputFile="$(OutDir)/Zegar.scr"
 				LinkIncremental="2"
-				IgnoreAllDefaultLibraries="FALSE"
+				AdditionalLibraryDirectories="&quot;C:\Program Files\Microsoft DirectX SDK (February 2007)\Lib\x86&quot;;&quot;C:\Program Files\Microsoft DirectX SDK (December 2006)\Samples\C++\DXUT\Core&quot;;&quot;C:\Program Files\Microsoft Platform SDK\Lib&quot;"
+				GenerateManifest="false"
+				IgnoreAllDefaultLibraries="false"
 				IgnoreDefaultLibraryNames=""
-				DelayLoadDLLs="d3d8.dll"
-				GenerateDebugInformation="TRUE"
+				DelayLoadDLLs=""
+				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/Zegar.pdb"
 				SubSystem="2"
 				StackReserveSize="0"
 				StackCommitSize="0"
-				SupportUnloadOfDelayLoadedDLL="FALSE"
-				TargetMachine="1"/>
+				SupportUnloadOfDelayLoadedDLL="false"
+				TargetMachine="1"
+			/>
 			<Tool
-				Name="VCMIDLTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCManifestTool"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCXDCMakeTool"
+			/>
 			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCBscMakeTool"
+			/>
 			<Tool
-				Name="VCResourceCompilerTool"/>
+				Name="VCFxCopTool"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCAppVerifierTool"
+			/>
 			<Tool
-				Name="VCWebDeploymentTool"/>
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory="Release"
 			IntermediateDirectory="Release"
 			ConfigurationType="1"
-			CharacterSet="2"
-			WholeProgramOptimization="FALSE">
+			InheritedPropertySheets="..\..\..\..\..\..\Program Files\Microsoft Visual Studio 8\VC\VCProjectDefaults\UpgradeFromVC70.vsprops"
+			CharacterSet="1"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				MkTypLibCompatible="false"
+				GenerateTypeLibrary="false"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
-				GlobalOptimizations="FALSE"
 				InlineFunctionExpansion="1"
-				EnableIntrinsicFunctions="TRUE"
-				OmitFramePointers="TRUE"
-				EnableFiberSafeOptimizations="FALSE"
-				OptimizeForWindowsApplication="TRUE"
-				AdditionalIncludeDirectories=".\"
+				EnableIntrinsicFunctions="true"
+				OmitFramePointers="true"
+				EnableFiberSafeOptimizations="false"
+				AdditionalIncludeDirectories="&quot;C:\Program Files\Microsoft DirectX SDK (February 2007)\Samples\C++\DXUT\Core&quot;;./;&quot;$(InputDir)/D3D&quot;;&quot;$(InputDir)&quot;;&quot;C:\Program Files\Microsoft Platform SDK\Include&quot;;&quot;C:\Program Files\Microsoft DirectX SDK (February 2007)\Include&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
-				StringPooling="TRUE"
-				RuntimeLibrary="4"
-				BufferSecurityCheck="TRUE"
-				EnableFunctionLevelLinking="TRUE"
-				UsePrecompiledHeader="2"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				BufferSecurityCheck="true"
+				EnableFunctionLevelLinking="true"
+				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				Detect64BitPortabilityProblems="TRUE"
+				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="0"
-				CompileAs="2"/>
+				CompileAs="2"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="&quot;C:\Program Files\Microsoft Platform SDK\Include&quot;"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
 				Name="VCLinkerTool"
-				RegisterOutput="FALSE"
-				AdditionalDependencies="winmm.lib d3dx8dt.lib delayimp.lib Dxerr8.lib Comctl32.lib dxguid.lib d3d8.lib d3dx.lib ole32.lib"
+				RegisterOutput="false"
+				AdditionalDependencies="dxerr.lib dxguid.lib d3dx9.lib d3d9.lib winmm.lib comctl32.lib dxgi.lib d3d10.lib d3dx10.lib dsound.lib user32.lib gdi32.lib Advapi32.lib shell32.lib"
 				OutputFile="$(OutDir)/Zegar.scr"
 				LinkIncremental="1"
-				IgnoreAllDefaultLibraries="FALSE"
-				IgnoreDefaultLibraryNames="odbc32.lib odbccp32.lib"
-				DelayLoadDLLs="d3d8.dll"
-				GenerateDebugInformation="TRUE"
+				AdditionalLibraryDirectories="&quot;C:\Program Files\Microsoft DirectX SDK (February 2007)\Lib\x86&quot;;&quot;C:\Program Files\Microsoft DirectX SDK (December 2006)\Samples\C++\DXUT\Core&quot;;&quot;C:\Program Files\Microsoft Platform SDK\Lib&quot;"
+				GenerateManifest="false"
+				IgnoreAllDefaultLibraries="false"
+				IgnoreDefaultLibraryNames=""
+				DelayLoadDLLs=""
+				GenerateDebugInformation="true"
 				SubSystem="2"
 				StackReserveSize="0"
 				StackCommitSize="0"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
-				SetChecksum="TRUE"
-				TargetMachine="1"/>
+				SetChecksum="true"
+				TargetMachine="1"
+			/>
 			<Tool
-				Name="VCMIDLTool"
-				MkTypLibCompatible="FALSE"
-				GenerateTypeLibrary="FALSE"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCManifestTool"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCXDCMakeTool"
+			/>
 			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCBscMakeTool"
+			/>
 			<Tool
-				Name="VCResourceCompilerTool"/>
+				Name="VCFxCopTool"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCAppVerifierTool"
+			/>
 			<Tool
-				Name="VCWebDeploymentTool"/>
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 	</Configurations>
+	<References>
+	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm">
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm"
+			>
 			<File
-				RelativePath="Dzwiek.cpp">
+				RelativePath="Dzwiek.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Konfig.cpp">
+				RelativePath="Konfig.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ShadowVolume.cpp">
+				RelativePath=".\MyEncrypt.cpp"
+				>
 			</File>
 			<File
-				RelativePath="Zegar.cpp">
+				RelativePath="nakretka.cpp"
+				>
 			</File>
 			<File
-				RelativePath="blad.cpp">
+				RelativePath="ogolne.cpp"
+				>
 			</File>
 			<File
-				RelativePath="muterka.cpp">
+				RelativePath=".\Shadows.cpp"
+				>
 			</File>
 			<File
-				RelativePath="ogolne.cpp">
-			</File>
-			<File
-				RelativePath="stdafx.cpp">
+				RelativePath="stdafx.cpp"
+				>
 				<FileConfiguration
-					Name="Debug|Win32">
+					Name="Debug|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"/>
+						UsePrecompiledHeader="1"
+					/>
 				</FileConfiguration>
 				<FileConfiguration
-					Name="Release|Win32">
+					Name="Release|Win32"
+					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"/>
+						UsePrecompiledHeader="1"
+					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="tarcza.cpp">
+				RelativePath="tarcza.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\wskaz.cpp"
+				>
+			</File>
+			<File
+				RelativePath="Zegar.cpp"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h;hpp;hxx;hm;inl;inc">
+			Filter="h;hpp;hxx;hm;inl;inc"
+			>
 			<File
-				RelativePath="Dzwiek.h">
+				RelativePath="define.h"
+				>
 			</File>
 			<File
-				RelativePath="Konfig.h">
+				RelativePath="Dzwiek.h"
+				>
 			</File>
 			<File
-				RelativePath="Resource.h">
+				RelativePath="Konfig.h"
+				>
 			</File>
 			<File
-				RelativePath="ShadowVolume.h">
+				RelativePath=".\kubera.math.h"
+				>
 			</File>
 			<File
-				RelativePath="Zegar.h">
+				RelativePath=".\MyEncrypt.h"
+				>
 			</File>
 			<File
-				RelativePath="blad.h">
+				RelativePath="nakretka.h"
+				>
 			</File>
 			<File
-				RelativePath="define.h">
+				RelativePath="ogolne.h"
+				>
 			</File>
 			<File
-				RelativePath="muterka.h">
+				RelativePath="Resource.h"
+				>
 			</File>
 			<File
-				RelativePath="ogolne.h">
+				RelativePath=".\Shadows.h"
+				>
 			</File>
 			<File
-				RelativePath="stdafx.h">
+				RelativePath="stdafx.h"
+				>
 			</File>
 			<File
-				RelativePath="tarcza.h">
+				RelativePath="tarcza.h"
+				>
 			</File>
 			<File
-				RelativePath="wskaz.h">
+				RelativePath=".\Version.h"
+				>
+			</File>
+			<File
+				RelativePath="wskaz.h"
+				>
+			</File>
+			<File
+				RelativePath="Zegar.h"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Resource Files"
-			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+			>
 			<File
-				RelativePath="..\Zasoby\Zegar.manifest">
+				RelativePath="..\Zasoby\small.ico"
+				>
 			</File>
 			<File
-				RelativePath="Zegar.rc">
+				RelativePath="..\Zasoby\Zegar.manifest"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\Zasoby\gong.mid">
-			</File>
-			<File
-				RelativePath="..\Zasoby\mosiadz.png">
-			</File>
-			<File
-				RelativePath="..\Zasoby\small.ico">
-			</File>
-			<File
-				RelativePath="..\Zasoby\stal.png">
-			</File>
-			<File
-				RelativePath="..\Zasoby\tarcza.PNG">
+				RelativePath="Zegar.rc"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Zrodla"
-			Filter="">
+			>
+			<Filter
+				Name="D3D"
+				>
+				<File
+					RelativePath="D3D\d3dsaver.cpp"
+					>
+				</File>
+				<File
+					RelativePath="D3D\d3dsaver.h"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\dxstdafx.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\dxstdafx.h"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUT.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUT.h"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUTenum.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUTenum.h"
+					>
+				</File>
+				<File
+					RelativePath="D3D\dxutil.cpp"
+					>
+				</File>
+				<File
+					RelativePath="D3D\dxutil.h"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUTMesh.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUTMesh.h"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUTmisc.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUTmisc.h"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUTRes.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUTRes.h"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUTsound.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\D3D\DXUTsound.h"
+					>
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Kreatory"
+			>
 			<File
-				RelativePath="d3dsaver.cpp">
+				RelativePath=".\Kreatory\$nakretka$.h"
+				>
 			</File>
 			<File
-				RelativePath="d3dsaver.h">
+				RelativePath=".\Kreatory\$tarcza$.h"
+				>
 			</File>
 			<File
-				RelativePath="d3dutil.cpp">
-			</File>
-			<File
-				RelativePath="d3dutil.h">
-			</File>
-			<File
-				RelativePath="dmutil.cpp">
-			</File>
-			<File
-				RelativePath="dmutil.h">
-			</File>
-			<File
-				RelativePath="dxutil.cpp">
-			</File>
-			<File
-				RelativePath="dxutil.h">
+				RelativePath=".\Kreatory\$wskaz$.h"
+				>
 			</File>
 		</Filter>
 		<File
-			RelativePath="ReadMe.txt">
+			RelativePath=".\ReadMe.txt"
+			>
 		</File>
 	</Files>
 	<Globals>

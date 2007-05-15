@@ -1,0 +1,10 @@
+LIBRARY	"KuberaInfoPlugin"
+; Plugin dla NSIS-a
+
+EXPORTS
+    ; Explicit exports can go here
+    UniqueInstallation		@1
+    Unload					@2
+	VerifyBinary			@3
+	IsWindowsServer			@4
+	

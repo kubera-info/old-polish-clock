@@ -1,64 +1,56 @@
+// ###########################################################
+// Dzwiek.h - pakiet dzwiêku generowanego przez DirectSound3d.
+// ###########################################################
+
 #ifndef _DZWIEK_H_
 #define _DZWIEK_H_
 
-// #############################################
+#include <dsound.h>
+#include "konfig.h"
+
+// ########################################################
 // Nazwa: class CDzwiek
-// Opis: Klasa oparta na DirectMusic
-//       CDzwiek s³u¿y 
-//       do odtwarzania jednego zasou MIDI
-// #############################################
-class CDzwiek
+// Opis: Klasa odpowiadaj¹ca za odtworzenie dŸwiêków
+//       wytwarzanych przez chodz¹cy zegar.
+//       Klasa dziedziczy po CObiektGtaf i jest kolejkowana
+//       w czasie pracy animacji.
+// ########################################################
+class CDzwiek : public CObiektGraf
 {
 public:
-	CDzwiek();
-	// #############################################
-	// Nazwa: metoda CDzwiek.Create()
-	// Opis: Przygotowanie wymaganych obiektów COM
-	//       DirectMusic wymaganych do odtwarzania
-	//       zasobu MIDI
-	// #############################################
-	HRESULT Create()
-	{
-		HRESULT hr;
-		m_pMusicManager = new CZegarMusicManager();
-		if(SUCCEEDED(hr = m_pMusicManager->Initialize(NULL)))
-			if(SUCCEEDED(m_pMusicManager->CreateSegmentFromResource(
-				&m_pMusicSegment,
-				MAKEINTRESOURCE(IDR_GONG), "MID",
-				TRUE, TRUE)))
-			{
-				float m_fTempo = 6.0f / 5.0f;
-				m_pMusicManager->GetPerformance()->
-					SetGlobalParam(GUID_PerfMasterTempo, (VOID *) (&m_fTempo), sizeof(m_fTempo));
-				Glosnosc(g_wGlosnosc);
-				return S_OK;
-			}
-		SAFE_DELETE(m_pMusicSegment);
-		SAFE_DELETE(m_pMusicManager);
-		return E_FAIL;
-	}
-	HRESULT GrajTik();
-	HRESULT GrajGong();
-	HRESULT Glosnosc(const WORD pSlider);
+	// Utworzenie klasy.
+	CDzwiek(const HWND hMainWindow);
+	// Za³adowanie dŸwiêków.
+	HRESULT OnCreateDevice( LPDIRECT3DDEVICE9 pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc );
+	// Podczas rysowania grafiki klasa nie wykona ¿adnych czynnoœci.
+	virtual void OnFrameRender( LPDIRECT3DDEVICE9 pd3dDevice) { };
+	// Odegranie dzwiêku(ów).
+	virtual void OnFrameMove( );
+	// Ustawienie g³oœnoœci wg skali liniowej.
+	void Ustaw(const DWORD pSlider);
+	// Aktualizacja g³oœnoœci.
+	HRESULT Glosnosc();
 	void StopAll();
 	~CDzwiek();
+	// Odegranie d¿iêku pracy zegara.
+	HRESULT GrajTik();
+	// Odegranie pracy sprê¿yny gongu.
+	HRESULT GrajGong();
 
-protected:
-		// #############################################
-		// Nazwa: class CDzwiek
-		// Opis: Klasa oparta na CMusicManager
-		//       Ró¿nica miêdzy obiema klasami wystêpuje
-	    //       w konstruktorze, ten u¿ywa nowszej
-	    //       funkcji API dla interfejsów COM
-		// #############################################
-		class CZegarMusicManager : public CMusicManager
-		{
-		public:
-			CZegarMusicManager();
-		};
+private:
+	// Utworzenie jednego dzwiêku z zasobu aplikacji.
+	HRESULT AlokujDzwiek(CSound ** pDzwiek, const INT p_IDWAV);
+	// Odegranie jednego dŸwiêku.
+	HRESULT Graj(CSound * pDzwiek);
 
-	CZegarMusicManager* m_pMusicManager; // Maganager DirectMusic
-	CMusicSegment*      m_pMusicSegment; // Segement z dŸwiêkiem MIDI
-} extern * g_pDzwiek;
+	CSoundManager * pSoundManager; 
+	CSound * DzwTik, * DzwGong;
+	LPDIRECTSOUND3DLISTENER m_pDSListener;		// 3D listener object.
+	DS3DLISTENER            m_dsListenerParams;	// Listener properties.
+	
+	long nVolume; // Bie¿¹ca g³oœnoœæ.
+	long nIlSekund; // Iloœæ odegranych sekund dla gongu.
+	SYSTEMTIME m_poprzedz_czas; // Czas ostatniej operacji, pozwala wykryæ zmianê czasu bie¿¹cego.
+};
 
 #endif

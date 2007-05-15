@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0"> 
 <assemblyIdentity 
-    version="1.0.0.0" 
+    version="2.0.0.1" 
     processorArchitecture="X86" 
-    name="Microsoft.Windows.Kubera.Info.Zegar"
+    name="Kubera.Info.ScreenSaver.Clock3D"
     type="win32" 
 /> 
-<description>Zegar</description> 
+<description>
+	Wygaszacz Ekranu "Zegar".
+	Заставка "Часы".
+	Screen Saver "Clock".
+	Type: GNU GPL 2.1.
+	Author: Włodzimierz O. Kubera.
+	Official Page: http://screensaver.kubera.info/
+	Old Polish Clock (XIX / XX Century)
+</description> 
 <dependency> 
     <dependentAssembly> 
         <assemblyIdentity 

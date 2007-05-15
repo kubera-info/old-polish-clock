@@ -1,12 +1,12 @@
 #include "stdafx.h"
 
-TCHAR g_blad [4096] = "";
+TCHAR g_blad [256] = L"";
 
 // #############################################
 // Nazwa: wypisz_blad
 // Opis: Zapisanie danych w rejestrze
 // #############################################
-/*HRESULT wypisz_blad(const HRESULT e)
+HRESULT wypisz_blad(const HRESULT e)
 {
 	if(e != ERROR_SUCCESS)
 	{
@@ -30,4 +30,4 @@ TCHAR g_blad [4096] = "";
 		LocalFree( lpMsgBuf );
 	}
 	return e;
-}*/
+}

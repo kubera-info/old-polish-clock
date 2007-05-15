@@ -1,79 +1,45 @@
+// Wygaszacz Ekranu "Stary Polski Zegar".
+// Aplikacja ilustruje artyku³ w Software Developer Juornal.
+// Copyright © 2007 by W³odzimierz O. Kubera
+// All rights reseved
+// Wszelkie prawa zastrze¿one
+// Aplikacja jest wykonana w technologii 32-bitowej.
+// Wymagany system operacyjny Windows XP lub nowszy.
+// Aplikacja jest licencjonowana zgodnie z dokumentem GNU GPL 2.1.
+// Licencja znajduje siê w katalogu "Licenses".
+// You could find a license for this project in the folder 'Licenses'.
+
 #pragma once
 
-// #############################################
-// Nazwa: class CD3DZegarSaver
-//        : public CD3DScreensaver
-// Opis: Wygaszacz ekranu
-// #############################################
-class CD3DZegarSaver : public CD3DScreensaver
-{	
-	virtual HRESULT Render();
-	virtual HRESULT FrameMove();
-	void RenderAllShadows();
-	HRESULT RenderShadow();
-	HRESULT DrawShadow();
-	void BuildProjectionMatrix2( );
-	void LoadTexture(INT p_IDB, LPDIRECT3DTEXTURE8 & p_texture);
-	virtual HRESULT RestoreDeviceObjects();
-	virtual HRESULT InvalidateDeviceObjects();
-	virtual HRESULT ConfirmDevice( D3DCAPS8* pCaps, DWORD dwBehavior,
-											D3DFORMAT Format );
-	virtual HRESULT OneTimeSceneInit();
-	virtual BOOL    GetTextForError( HRESULT hr, TCHAR* pszError, DWORD dwNumChars );
-	virtual VOID DoConfig();
-	virtual VOID ReadSettings();
-	virtual VOID WriteSettings();
-	void Zeruj(); // Przypisz NULL itp.
+#include "D3DSaver.h"
 
-	//Direct3D
-	CTarcza * m_tarcza;
-	CWskazGodz * m_wsk_godz;
-	CWskazMin * m_wsk_min;
-	CWskazSec * m_wsk_sec;
-	CMontaz * m_montaz;
-	D3DLIGHT8 m_tmp_light;
-	float m_fSwiatlo;
-	bool m_bTwoSided;
-	D3DXMATRIXA16 m_proj, m_view;
+namespace D3DSaver
+{
+	extern SYSTEMTIME g_aktual_czas;
+	extern SaverMode m_SaverMode;
 
-	// Inne
-	SYSTEMTIME m_poprzedz_czas;
+	//--------------------------------------------------------------------------------------
+	// Forward declarations 
+	//--------------------------------------------------------------------------------------
+	bool    CALLBACK ModifyDeviceSettings( DXUTDeviceSettings* pDeviceSettings, const D3DCAPS9* pCaps, void* pUserContext );
+	void    CALLBACK OnFrameMove( IDirect3DDevice9* pd3dDevice, double fTime, float fElapsedTime, void* pUserContext );
+	LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, bool* pbNoFurtherProcessing, void* pUserContext );
+	void    CALLBACK KeyboardProc( UINT nChar, bool bKeyDown, bool bAltDown, void* pUserContext );
+	void    CALLBACK MouseProc( bool bLeftButtonDown, bool bRightButtonDown, bool bMiddleButtonDown, bool bSideButton1Down, bool bSideButton2Down, int nMouseWheelDelta, int xPos, int yPos, void* pUserContext );
+	//void    CALLBACK OnGUIEvent( UINT nEvent, int nControlID, CDXUTControl* pControl, void* pUserContext );
 
-public:
-	CD3DZegarSaver(const bool Stencil) : CD3DScreensaver()
-	{
-		// Windows
-		lstrcpy(m_strWindowTitle, _T("Wygaszacz \"Zegar3D\""));
-		lstrcpy(m_strRegPath, g_reg);
+	bool    CALLBACK IsD3D9DeviceAcceptable( D3DCAPS9* pCaps, D3DFORMAT AdapterFormat, D3DFORMAT BackBufferFormat, bool bWindowed, void* pUserContext );
+	HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext );
+	HRESULT CALLBACK OnD3D9ResetDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext );
+	void    CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, float fElapsedTime, void* pUserContext );
+	void    CALLBACK OnD3D9LostDevice( void* pUserContext );
+	void    CALLBACK OnD3D9DestroyDevice( void* pUserContext );
 
-		// Direct3D
-		Zeruj();
-		m_bOneScreenOnly	= TRUE;
-		if(Stencil)
-		{
-			m_bUseDepthBuffer   = TRUE;
-			g_bUseDepthBuffer   = TRUE;
-			//m_dwMinDepthBits    =   16;
-			m_dwMinStencilBits  =    4;
-		}
-		else
-			g_bUseDepthBuffer   = FALSE;
-	}
-	HRESULT Get_hrError()
-	{
-		return m_hrError;
-	}
-	BOOL GetConfigErrorMode()
-	{
-		return (m_bErrorMode && (m_SaverMode == sm_config));
-	}
-	~CD3DZegarSaver()
-	{
-		// Stop playback
-		SAFE_DELETE(g_pDzwiek);
-	}
-	/* Destruktory, które by³y wo³ane dopiero po dezaktywacji zegara zosta³y usuniête,
-	   gdy¿ tylko fragmentarycznie zwalania³y pamiêæ */
+	//bool    CALLBACK IsD3D10DeviceAcceptable( UINT Adapter, UINT Output, D3D10_DRIVER_TYPE DeviceType, DXGI_FORMAT BackBufferFormat, bool bWindowed, void* pUserContext );
+	//HRESULT CALLBACK OnD3D10CreateDevice( ID3D10Device* pd3dDevice, const DXGI_SURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext );
+	//HRESULT CALLBACK OnD3D10SwapChainResized( ID3D10Device* pd3dDevice, IDXGISwapChain *pSwapChain, const DXGI_SURFACE_DESC* pBackBufferSurfaceDesc, void* pUserContext );
+	//void    CALLBACK OnD3D10FrameRender( ID3D10Device* pd3dDevice, double fTime, float fElapsedTime, void* pUserContext );
+	//void    CALLBACK OnD3D10SwapChainReleasing( void* pUserContext );
+	//void    CALLBACK OnD3D10DestroyDevice( void* pUserContext );
 
-	HRESULT Create( HINSTANCE hInstance );
-};
+}

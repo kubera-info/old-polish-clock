@@ -1,0 +1,16 @@
+Wygaszacz Ekranu "Stary Polski Zegar".
+
+Zegar3D jest wygaszaczem ekranu zbudowanym na bazie DirectX SDK
+w wersji February 2007. Intencj¹ autora by³o wykonanie zabawki
+prezentuj¹cej stary polski zegar z prze³omu XIX/XX wieku, 
+który w XXI wieku jest przedmiotem obecnie rzadko spotykanym.
+
+Aplikacja wyœwietla zegar, który pracuje w czasie rzeczywistym i pokazuje czas maszyny.
+Platforma wygaszacza bazuje na adaptacji dawnego projektu
+wygaszaczy firmy Microsoft, który jednak zosta³ przez t¹ firmê zaniechany.
+
+Opisywany wygaszacz ekranu powsta³ w pewnym stopniu dziêki publikacjom w Internecie
+DirectX SDK, Platform SDK, na forach internetowych, literaturze Microsoft oraz 
+przy u¿yciu kompilatora VC++ Express. :)
+
+W³odzimierz O. Kubera
