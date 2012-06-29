@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opc>  
+  <technique name="GenHardwareShadowMap" vs="shadow_vs" ps="shadow_ps"/>
+  <technique name="GenHardwareShadowMapTex" vs="shadow_tex_vs" ps="shadow_ps"/>
+  <technique name="TDiffuse" vs="vs_main" ps="ps_main"/>
+  <technique name="TDiffuseTex" vs="vs_main_tex" ps="ps_main_tex"/>
+  <technique name="TDiffuseBrickTex" vs="vs_main_brick_tex" ps="ps_main_tex"/>
+  <technique name="TSpecularTex" vs="vs_main_specular_tex" ps="ps_main_specular_tex"/>
+  <technique name="TSpecularTex2" vs="vs_main_specular_tex" ps="ps_main_specular_tex_2"/>
+  <technique name="THand" vs="vs_main_specular_hand" ps="ps_main_specular_hand"/>
+  <technique name="TGlass" vs="vs_main_specular_glass" ps="ps_main_specular_glass"/>
+  <technique name="TAmbientGlass" vs="vs_ambient_glass" ps="ps_ambient_glass"/>
+  <technique name="TBlackWood" vs="vs_main_specular_wood" ps="ps_main_specular_wood"/>
+  <technique name="TWood" vs="vs_main_tex" ps="ps_main_tex_wood"/>
+  <technique name="TGoldenMetallic" vs="vs" ps="ps"/>
+  <technique name="TMetallicTex" vs="vs_tex" ps="ps_tex"/>
+</opc>

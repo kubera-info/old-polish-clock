@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{0d89ccb5-8f8c-45ae-9d98-7b669e8dd23e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bin">
+      <UniqueIdentifier>{133e436b-aefd-4eef-8134-e63be35239aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DX Runtime">
+      <UniqueIdentifier>{aea82e82-c2ce-41d4-86b6-8c114001ff4b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <WinRarCreator Include="Scripts\Common.bat">
+      <Filter>Scripts</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="Scripts\D3DX.bat">
+      <Filter>Scripts</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="Scripts\rtf.bat">
+      <Filter>Scripts</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="Scripts\SetupX64.bat">
+      <Filter>Scripts</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="Scripts\SetupX86.bat">
+      <Filter>Scripts</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\APR2007_xinput_x64.cab">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\APR2007_xinput_x86.cab">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\DSETUP.dll">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\dsetup32.dll">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\dxupdate.cab">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\Jun2010_D3DCompiler_43_x64.cab">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\Jun2010_D3DCompiler_43_x86.cab">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\Jun2010_d3dx9_43_x64.cab">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\Jun2010_d3dx9_43_x86.cab">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\Jun2010_XAudio_x64.cab">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+    <WinRarCreator Include="..\DX Runtime\Jun2010_XAudio_x86.cab">
+      <Filter>DX Runtime</Filter>
+    </WinRarCreator>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Bin\Default.SFX">
+      <Filter>Bin</Filter>
+    </None>
+    <None Include="..\Bin\Rar.exe">
+      <Filter>Bin</Filter>
+    </None>
+    <None Include="..\Merge.rules" />
+  </ItemGroup>
+</Project>

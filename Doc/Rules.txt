@@ -1,0 +1,39 @@
+You could use CDestructable as a base for the roots
+
+Base classes may be abstract, if possible
+
+Try using smart pointers, or minimum:
+Never leave uninitialized pointers and handles
+
+Deriving classes may be casted into base only with their logic, 
+in other case, it should not be possible
+(create additional artificial, maybe abstract or selaed classes)
+
+The usage of Microsoft's extension is correct (sealed keyword etc.)
+
+In a new edition, always increment version resource
+
+Use OOP correctly, develop yourself-firstly
+
+Unuseful but possible, application should be stable and less efficient rather than fast with crashes possible
+
+If you use a comparission (operator ==), put the constant on the left side of equation
+
+Direct3D9c resources should stored with a pool managed style
+
+Use exceptions from the engine for stopping application, in additional threads (tasks) too
+
+Some of elements have theirs businness logic, and the lower level is not performing some test,
+bacause everything in a low level must be OK.
+
+Use asserts
+
+Minimum, SSE is required
+
+Engine's tools do not have to be stable in all situations, they can not be redistributed
+
+Use STL rather than ATL, but both are possible
+
+Shader Model 3.0 is minimum
+
+Oops, sometimes beatiful code is less important than stable :)

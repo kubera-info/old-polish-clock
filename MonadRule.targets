@@ -1,0 +1,683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema
+      Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml" />
+    <AvailableItemName
+      Include="FXC_SM2">
+      <Targets>_FXC_SM2</Targets>
+    </AvailableItemName>
+    <AvailableItemName
+      Include="FXC_SM4">
+      <Targets>_FXC_SM4</Targets>
+    </AvailableItemName>
+    <AvailableItemName
+      Include="TexConv">
+      <Targets>_TexConv</Targets>
+    </AvailableItemName>
+    <AvailableItemName
+      Include="TexConv_2">
+      <Targets>_TexConv_2</Targets>
+    </AvailableItemName>
+    <AvailableItemName
+      Include="DDS_Tex">
+      <Targets>_DDS_Tex</Targets>
+    </AvailableItemName>
+    <AvailableItemName
+      Include="XML">
+      <Targets>_XML</Targets>
+    </AvailableItemName>
+    <AvailableItemName
+      Include="wav">
+      <Targets>_wav</Targets>
+    </AvailableItemName>
+    <AvailableItemName
+      Include="Vbs2Vbe">
+      <Targets>_Vbs2Vbe</Targets>
+    </AvailableItemName>
+    <AvailableItemName
+      Include="Mesh">
+      <Targets>_Mesh</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <UsingTask
+    TaskName="FXC_SM2"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <UsingTask
+    TaskName="FXC_SM4"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <UsingTask
+    TaskName="TexConv"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <UsingTask
+    TaskName="TexConv_2"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <UsingTask
+    TaskName="DDS_Tex"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <UsingTask
+    TaskName="XML"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <UsingTask
+    TaskName="wav"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <UsingTask
+    TaskName="Vbs2Vbe"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <UsingTask
+    TaskName="Mesh"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target
+    Name="_FXC_SM2"
+    BeforeTargets="$(FXC_SM2BeforeTargets)"
+    AfterTargets="$(FXC_SM2AfterTargets)"
+    Condition="'@(FXC_SM2)' != ''"
+    DependsOnTargets="$(FXC_SM2DependsOn);ComputeFXC_SM2Output"
+    Outputs="%(FXC_SM2.Outputs)"
+    Inputs="%(FXC_SM2.Identity);%(FXC_SM2.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <FXC_SM2
+        Remove="@(FXC_SM2)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <FXC_SM2_tlog
+        Include="%(FXC_SM2.Outputs)"
+        Condition="'%(FXC_SM2.Outputs)' != '' and '%(FXC_SM2.ExcludedFromBuild)' != 'true'">
+        <Source>@(FXC_SM2, '|')</Source>
+      </FXC_SM2_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(FXC_SM2.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(FXC_SM2_tlog)' != '' and '%(FXC_SM2_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(FXC_SM2_tlog.Source);@(FXC_SM2_tlog-&gt;'%(Fullpath)')" />
+    <FXC_SM2
+      Condition="'@(FXC_SM2)' != '' and '%(FXC_SM2.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(FXC_SM2.CommandLineTemplate)"
+      AdditionalOptions="%(FXC_SM2.AdditionalOptions)"
+      Inputs="%(FXC_SM2.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeFXC_SM2Output;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeFXC_SM2Output;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeFXC_SM2Output"
+    Condition="'@(FXC_SM2)' != ''">
+    <ItemGroup>
+      <FXC_SM2DirsToMake
+        Condition="'@(FXC_SM2)' != '' and '%(FXC_SM2.ExcludedFromBuild)' != 'true'"
+        Include="%(FXC_SM2.Outputs)" />
+      <Link
+        Include="%(FXC_SM2DirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(FXC_SM2DirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(FXC_SM2DirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(FXC_SM2DirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+  <Target
+    Name="_FXC_SM4"
+    BeforeTargets="$(FXC_SM4BeforeTargets)"
+    AfterTargets="$(FXC_SM4AfterTargets)"
+    Condition="'@(FXC_SM4)' != ''"
+    DependsOnTargets="$(FXC_SM4DependsOn);ComputeFXC_SM4Output"
+    Outputs="%(FXC_SM4.Outputs)"
+    Inputs="%(FXC_SM4.Identity);%(FXC_SM4.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <FXC_SM4
+        Remove="@(FXC_SM4)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <FXC_SM4_tlog
+        Include="%(FXC_SM4.Outputs)"
+        Condition="'%(FXC_SM4.Outputs)' != '' and '%(FXC_SM4.ExcludedFromBuild)' != 'true'">
+        <Source>@(FXC_SM4, '|')</Source>
+      </FXC_SM4_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(FXC_SM4.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(FXC_SM4_tlog)' != '' and '%(FXC_SM4_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(FXC_SM4_tlog.Source);@(FXC_SM4_tlog-&gt;'%(Fullpath)')" />
+    <FXC_SM4
+      Condition="'@(FXC_SM4)' != '' and '%(FXC_SM4.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(FXC_SM4.CommandLineTemplate)"
+      ShaderType="%(FXC_SM4.ShaderType)"
+      AdditionalOptions="%(FXC_SM4.AdditionalOptions)"
+      Inputs="%(FXC_SM4.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeFXC_SM4Output;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeFXC_SM4Output;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeFXC_SM4Output"
+    Condition="'@(FXC_SM4)' != ''">
+    <ItemGroup>
+      <FXC_SM4DirsToMake
+        Condition="'@(FXC_SM4)' != '' and '%(FXC_SM4.ExcludedFromBuild)' != 'true'"
+        Include="%(FXC_SM4.Outputs)" />
+      <Link
+        Include="%(FXC_SM4DirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(FXC_SM4DirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(FXC_SM4DirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(FXC_SM4DirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+  <Target
+    Name="_TexConv"
+    BeforeTargets="$(TexConvBeforeTargets)"
+    AfterTargets="$(TexConvAfterTargets)"
+    Condition="'@(TexConv)' != ''"
+    DependsOnTargets="$(TexConvDependsOn);ComputeTexConvOutput"
+    Outputs="%(TexConv.Outputs)"
+    Inputs="%(TexConv.Identity);%(TexConv.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <TexConv
+        Remove="@(TexConv)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <TexConv_tlog
+        Include="%(TexConv.Outputs)"
+        Condition="'%(TexConv.Outputs)' != '' and '%(TexConv.ExcludedFromBuild)' != 'true'">
+        <Source>@(TexConv, '|')</Source>
+      </TexConv_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(TexConv.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(TexConv_tlog)' != '' and '%(TexConv_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(TexConv_tlog.Source);@(TexConv_tlog-&gt;'%(Fullpath)')" />
+    <TexConv
+      Condition="'@(TexConv)' != '' and '%(TexConv.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(TexConv.CommandLineTemplate)"
+      TextureFormat="%(TexConv.TextureFormat)"
+      OnDemand="%(TexConv.OnDemand)"
+      AdditionalOptions="%(TexConv.AdditionalOptions)"
+      Inputs="%(TexConv.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeTexConvOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeTexConvOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeTexConvOutput"
+    Condition="'@(TexConv)' != ''">
+    <ItemGroup>
+      <TexConvDirsToMake
+        Condition="'@(TexConv)' != '' and '%(TexConv.ExcludedFromBuild)' != 'true'"
+        Include="%(TexConv.Outputs)" />
+      <Link
+        Include="%(TexConvDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(TexConvDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(TexConvDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(TexConvDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+  <Target
+    Name="_TexConv_2"
+    BeforeTargets="$(TexConv_2BeforeTargets)"
+    AfterTargets="$(TexConv_2AfterTargets)"
+    Condition="'@(TexConv_2)' != ''"
+    DependsOnTargets="$(TexConv_2DependsOn);ComputeTexConv_2Output"
+    Outputs="%(TexConv_2.Outputs)"
+    Inputs="%(TexConv_2.Identity);%(TexConv_2.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <TexConv_2
+        Remove="@(TexConv_2)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <TexConv_2_tlog
+        Include="%(TexConv_2.Outputs)"
+        Condition="'%(TexConv_2.Outputs)' != '' and '%(TexConv_2.ExcludedFromBuild)' != 'true'">
+        <Source>@(TexConv_2, '|')</Source>
+      </TexConv_2_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(TexConv_2.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(TexConv_2_tlog)' != '' and '%(TexConv_2_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(TexConv_2_tlog.Source);@(TexConv_2_tlog-&gt;'%(Fullpath)')" />
+    <TexConv_2
+      Condition="'@(TexConv_2)' != '' and '%(TexConv_2.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(TexConv_2.CommandLineTemplate)"
+      TextureFormat="%(TexConv_2.TextureFormat)"
+      OnDemand="%(TexConv_2.OnDemand)"
+      AdditionalOptions="%(TexConv_2.AdditionalOptions)"
+      Inputs="%(TexConv_2.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeTexConv_2Output;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeTexConv_2Output;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeTexConv_2Output"
+    Condition="'@(TexConv_2)' != ''">
+    <ItemGroup>
+      <TexConv_2DirsToMake
+        Condition="'@(TexConv_2)' != '' and '%(TexConv_2.ExcludedFromBuild)' != 'true'"
+        Include="%(TexConv_2.Outputs)" />
+      <Link
+        Include="%(TexConv_2DirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(TexConv_2DirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(TexConv_2DirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(TexConv_2DirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+  <Target
+    Name="_DDS_Tex"
+    BeforeTargets="$(DDS_TexBeforeTargets)"
+    AfterTargets="$(DDS_TexAfterTargets)"
+    Condition="'@(DDS_Tex)' != ''"
+    DependsOnTargets="$(DDS_TexDependsOn);ComputeDDS_TexOutput"
+    Outputs="%(DDS_Tex.Outputs)"
+    Inputs="%(DDS_Tex.Identity);%(DDS_Tex.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <DDS_Tex
+        Remove="@(DDS_Tex)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <DDS_Tex_tlog
+        Include="%(DDS_Tex.Outputs)"
+        Condition="'%(DDS_Tex.Outputs)' != '' and '%(DDS_Tex.ExcludedFromBuild)' != 'true'">
+        <Source>@(DDS_Tex, '|')</Source>
+      </DDS_Tex_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(DDS_Tex.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(DDS_Tex_tlog)' != '' and '%(DDS_Tex_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(DDS_Tex_tlog.Source);@(DDS_Tex_tlog-&gt;'%(Fullpath)')" />
+    <DDS_Tex
+      Condition="'@(DDS_Tex)' != '' and '%(DDS_Tex.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(DDS_Tex.CommandLineTemplate)"
+      AdditionalOptions="%(DDS_Tex.AdditionalOptions)"
+      Inputs="%(DDS_Tex.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeDDS_TexOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeDDS_TexOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeDDS_TexOutput"
+    Condition="'@(DDS_Tex)' != ''">
+    <ItemGroup>
+      <DDS_TexDirsToMake
+        Condition="'@(DDS_Tex)' != '' and '%(DDS_Tex.ExcludedFromBuild)' != 'true'"
+        Include="%(DDS_Tex.Outputs)" />
+      <Link
+        Include="%(DDS_TexDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(DDS_TexDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(DDS_TexDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(DDS_TexDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+  <Target
+    Name="_XML"
+    BeforeTargets="$(XMLBeforeTargets)"
+    AfterTargets="$(XMLAfterTargets)"
+    Condition="'@(XML)' != ''"
+    DependsOnTargets="$(XMLDependsOn);ComputeXMLOutput"
+    Outputs="%(XML.Outputs)"
+    Inputs="%(XML.Identity);%(XML.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <XML
+        Remove="@(XML)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <XML_tlog
+        Include="%(XML.Outputs)"
+        Condition="'%(XML.Outputs)' != '' and '%(XML.ExcludedFromBuild)' != 'true'">
+        <Source>@(XML, '|')</Source>
+      </XML_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(XML.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(XML_tlog)' != '' and '%(XML_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(XML_tlog.Source);@(XML_tlog-&gt;'%(Fullpath)')" />
+    <XML
+      Condition="'@(XML)' != '' and '%(XML.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(XML.CommandLineTemplate)"
+      ConstsDest="%(XML.ConstsDest)"
+      AdditionalOptions="%(XML.AdditionalOptions)"
+      Inputs="%(XML.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeXMLOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeXMLOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeXMLOutput"
+    Condition="'@(XML)' != ''">
+    <ItemGroup>
+      <XMLDirsToMake
+        Condition="'@(XML)' != '' and '%(XML.ExcludedFromBuild)' != 'true'"
+        Include="%(XML.Outputs)" />
+      <Link
+        Include="%(XMLDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(XMLDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(XMLDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(XMLDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+  <Target
+    Name="_wav"
+    BeforeTargets="$(wavBeforeTargets)"
+    AfterTargets="$(wavAfterTargets)"
+    Condition="'@(wav)' != ''"
+    DependsOnTargets="$(wavDependsOn);ComputewavOutput"
+    Outputs="%(wav.Outputs)"
+    Inputs="%(wav.Identity);%(wav.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <wav
+        Remove="@(wav)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <wav_tlog
+        Include="%(wav.Outputs)"
+        Condition="'%(wav.Outputs)' != '' and '%(wav.ExcludedFromBuild)' != 'true'">
+        <Source>@(wav, '|')</Source>
+      </wav_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(wav.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(wav_tlog)' != '' and '%(wav_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(wav_tlog.Source);@(wav_tlog-&gt;'%(Fullpath)')" />
+    <wav
+      Condition="'@(wav)' != '' and '%(wav.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(wav.CommandLineTemplate)"
+      AudioFormat="%(wav.AudioFormat)"
+      AudioDest="%(wav.AudioDest)"
+      AudioExt="%(wav.AudioExt)"
+      AdditionalOptions="%(wav.AdditionalOptions)"
+      Inputs="%(wav.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputewavOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputewavOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputewavOutput"
+    Condition="'@(wav)' != ''">
+    <ItemGroup>
+      <wavDirsToMake
+        Condition="'@(wav)' != '' and '%(wav.ExcludedFromBuild)' != 'true'"
+        Include="%(wav.Outputs)" />
+      <Link
+        Include="%(wavDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(wavDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(wavDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(wavDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+  <Target
+    Name="_Vbs2Vbe"
+    BeforeTargets="$(Vbs2VbeBeforeTargets)"
+    AfterTargets="$(Vbs2VbeAfterTargets)"
+    Condition="'@(Vbs2Vbe)' != ''"
+    DependsOnTargets="$(Vbs2VbeDependsOn);ComputeVbs2VbeOutput"
+    Outputs="%(Vbs2Vbe.Outputs)"
+    Inputs="%(Vbs2Vbe.Identity);%(Vbs2Vbe.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <Vbs2Vbe
+        Remove="@(Vbs2Vbe)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <Vbs2Vbe_tlog
+        Include="%(Vbs2Vbe.Outputs)"
+        Condition="'%(Vbs2Vbe.Outputs)' != '' and '%(Vbs2Vbe.ExcludedFromBuild)' != 'true'">
+        <Source>@(Vbs2Vbe, '|')</Source>
+      </Vbs2Vbe_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(Vbs2Vbe.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(Vbs2Vbe_tlog)' != '' and '%(Vbs2Vbe_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(Vbs2Vbe_tlog.Source);@(Vbs2Vbe_tlog-&gt;'%(Fullpath)')" />
+    <Vbs2Vbe
+      Condition="'@(Vbs2Vbe)' != '' and '%(Vbs2Vbe.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(Vbs2Vbe.CommandLineTemplate)"
+      AdditionalOptions="%(Vbs2Vbe.AdditionalOptions)"
+      Inputs="%(Vbs2Vbe.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeVbs2VbeOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeVbs2VbeOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeVbs2VbeOutput"
+    Condition="'@(Vbs2Vbe)' != ''">
+    <ItemGroup>
+      <Vbs2VbeDirsToMake
+        Condition="'@(Vbs2Vbe)' != '' and '%(Vbs2Vbe.ExcludedFromBuild)' != 'true'"
+        Include="%(Vbs2Vbe.Outputs)" />
+      <Link
+        Include="%(Vbs2VbeDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(Vbs2VbeDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(Vbs2VbeDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(Vbs2VbeDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+  <Target
+    Name="_Mesh"
+    BeforeTargets="$(MeshBeforeTargets)"
+    AfterTargets="$(MeshAfterTargets)"
+    Condition="'@(Mesh)' != ''"
+    DependsOnTargets="$(MeshDependsOn);ComputeMeshOutput"
+    Outputs="%(Mesh.Outputs)"
+    Inputs="%(Mesh.Identity);%(Mesh.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <Mesh
+        Remove="@(Mesh)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <Mesh_tlog
+        Include="%(Mesh.Outputs)"
+        Condition="'%(Mesh.Outputs)' != '' and '%(Mesh.ExcludedFromBuild)' != 'true'">
+        <Source>@(Mesh, '|')</Source>
+      </Mesh_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(Mesh.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(Mesh_tlog)' != '' and '%(Mesh_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(Mesh_tlog.Source);@(Mesh_tlog-&gt;'%(Fullpath)')" />
+    <Mesh
+      Condition="'@(Mesh)' != '' and '%(Mesh.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(Mesh.CommandLineTemplate)"
+      OnDemand="%(Mesh.OnDemand)"
+      AdditionalOptions="%(Mesh.AdditionalOptions)"
+      Inputs="%(Mesh.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeMeshOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeMeshOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeMeshOutput"
+    Condition="'@(Mesh)' != ''">
+    <ItemGroup>
+      <MeshDirsToMake
+        Condition="'@(Mesh)' != '' and '%(Mesh.ExcludedFromBuild)' != 'true'"
+        Include="%(Mesh.Outputs)" />
+      <Link
+        Include="%(MeshDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(MeshDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(MeshDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(MeshDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+</Project>

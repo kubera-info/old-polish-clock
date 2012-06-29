@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema
+      Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml" />
+    <AvailableItemName
+      Include="WinRarCreator">
+      <Targets>_WinRarCreator</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <UsingTask
+    TaskName="WinRarCreator"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target
+    Name="_WinRarCreator"
+    BeforeTargets="$(WinRarCreatorBeforeTargets)"
+    AfterTargets="$(WinRarCreatorAfterTargets)"
+    Condition="'@(WinRarCreator)' != ''"
+    DependsOnTargets="$(WinRarCreatorDependsOn);ComputeWinRarCreatorOutput"
+    Outputs="%(WinRarCreator.Outputs)"
+    Inputs="%(WinRarCreator.Identity);%(WinRarCreator.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <WinRarCreator
+        Remove="@(WinRarCreator)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <WinRarCreator_tlog
+        Include="%(WinRarCreator.Outputs)"
+        Condition="'%(WinRarCreator.Outputs)' != '' and '%(WinRarCreator.ExcludedFromBuild)' != 'true'">
+        <Source>@(WinRarCreator, '|')</Source>
+      </WinRarCreator_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(WinRarCreator.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(WinRarCreator_tlog)' != '' and '%(WinRarCreator_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(WinRarCreator_tlog.Source);@(WinRarCreator_tlog-&gt;'%(Fullpath)')" />
+    <WinRarCreator
+      Condition="'@(WinRarCreator)' != '' and '%(WinRarCreator.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(WinRarCreator.CommandLineTemplate)"
+      AdditionalOptions="%(WinRarCreator.AdditionalOptions)"
+      Inputs="%(WinRarCreator.Identity)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeWinRarCreatorOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeWinRarCreatorOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeWinRarCreatorOutput"
+    Condition="'@(WinRarCreator)' != ''">
+    <ItemGroup>
+      <WinRarCreatorDirsToMake
+        Condition="'@(WinRarCreator)' != '' and '%(WinRarCreator.ExcludedFromBuild)' != 'true'"
+        Include="%(WinRarCreator.Outputs)" />
+      <Link
+        Include="%(WinRarCreatorDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(WinRarCreatorDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(WinRarCreatorDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(WinRarCreatorDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+</Project>

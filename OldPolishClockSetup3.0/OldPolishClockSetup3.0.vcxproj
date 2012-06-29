@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D19E3B53-175E-4A44-B504-FA9FE4A403BE}</ProjectGuid>
+    <RootNamespace>OldPolishClockSetup30</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <UseOfAtl>Static</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;.\;..\;..\Shared;..\bzip2-1.0.6;C:\Program Files\boost\boost_1_49_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>DXUT.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>libbz2.lib;Winmm.lib;version.lib;dsetup.lib;msi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Release;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <UACExecutionLevel>HighestAvailable</UACExecutionLevel>
+      <IgnoreSpecificDefaultLibraries>GDIPlus.lib OleAcc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AssemblyLinkResource>%(AssemblyLinkResource)</AssemblyLinkResource>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <TerminalServerAware>true</TerminalServerAware>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;.\;..\;..\Shared;..\bzip2-1.0.6;C:\Program Files\boost\boost_1_49_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>DXUT.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>libbz2.lib;Winmm.lib;version.lib;msi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalLibraryDirectories>..\Release;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <IgnoreSpecificDefaultLibraries>GDIPlus.lib OleAcc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <DelayLoadDLLs>%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AssemblyLinkResource>%(AssemblyLinkResource)</AssemblyLinkResource>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <TerminalServerAware>true</TerminalServerAware>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <SupportUnloadOfDelayLoadedDLL>true</SupportUnloadOfDelayLoadedDLL>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>signtool.exe sign /t http://timestamp.comodoca.com/authenticode /a "$(TargetPath)"</Command>
+    </PostBuildEvent>
+    <Manifest>
+      <EnableDPIAwareness>false</EnableDPIAwareness>
+      <AdditionalManifestFiles>OldPolishClockSetup3.0.manifest</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Dict.cpp" />
+    <ClCompile Include="DXUT.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Shared\I18N.cpp" />
+    <ClCompile Include="..\Shared\MonadCipher.cpp" />
+    <ClCompile Include="MonadDXUpdate.cpp" />
+    <ClCompile Include="MonadExternalUI.cpp" />
+    <ClCompile Include="..\Shared\MonadFile.cpp" />
+    <ClCompile Include="MonadFileTimestamp.cpp" />
+    <ClCompile Include="MonadGlobals.cpp" />
+    <ClCompile Include="..\Shared\MonadHash.cpp" />
+    <ClCompile Include="..\Shared\MonadLock.cpp" />
+    <ClCompile Include="MonadLog.cpp" />
+    <ClCompile Include="..\Shared\MonadParamater.cpp" />
+    <ClCompile Include="..\Shared\MonadRegistry.cpp" />
+    <ClCompile Include="MonadRepack.cpp" />
+    <ClCompile Include="MonadResource.cpp" />
+    <ClCompile Include="MonadSetupReg.cpp" />
+    <ClCompile Include="MonadStream.cpp" />
+    <ClCompile Include="..\Shared\MonadThreadBuilder.cpp" />
+    <ClCompile Include="..\Shared\MonadUniqueInstance.cpp" />
+    <ClCompile Include="OldPolishClockSetup3.0.cpp" />
+    <ClCompile Include="OldPolishClockSetup3.0Dlg.cpp" />
+    <ClCompile Include="Requirements.cpp" />
+    <ClCompile Include="SetupMonadWave.cpp" />
+    <ClCompile Include="..\Shared\System.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MonadFileTimestamp.h" />
+    <ClInclude Include="..\Shared\ByteArray.h" />
+    <ClInclude Include="..\bzip2-1.0.6\bzlib.h" />
+    <ClInclude Include="Dict.h" />
+    <ClInclude Include="DXUT.h" />
+    <ClInclude Include="..\Shared\I18N.h" />
+    <ClInclude Include="..\Shared\MonadCipher.h" />
+    <ClInclude Include="MonadDXUpdate.h" />
+    <ClInclude Include="MonadExternalUI.h" />
+    <ClInclude Include="..\Shared\MonadFile.h" />
+    <ClInclude Include="MonadGlobals.h" />
+    <ClInclude Include="..\Shared\MonadHash.h" />
+    <ClInclude Include="..\Shared\MonadLock.h" />
+    <ClInclude Include="MonadLog.h" />
+    <ClInclude Include="..\Shared\MonadParameter.h" />
+    <ClInclude Include="..\Shared\MonadRegistry.h" />
+    <ClInclude Include="MonadRepack.h" />
+    <ClInclude Include="MonadResource.h" />
+    <ClInclude Include="MonadSetupReg.h" />
+    <ClInclude Include="MonadStream.h" />
+    <ClInclude Include="..\Shared\MonadThreadBuilder.h" />
+    <ClInclude Include="..\Shared\MonadUniqueInstance.h" />
+    <ClInclude Include="OldPolishClockSetup3.0.h" />
+    <ClInclude Include="OldPolishClockSetup3.0Dlg.h" />
+    <ClInclude Include="Requirements.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SetupMonadWave.h" />
+    <ClInclude Include="..\Shared\System.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Banner\banner-zegar.bmp" />
+    <None Include="..\Merge\Packed\Common.exe" />
+    <None Include="..\Merge\Packed\D3DX.exe" />
+    <None Include="..\Waves\focus.wav" />
+    <None Include="Banner\Logos.bmp" />
+    <None Include="..\Waves\no.wav" />
+    <None Include="res\OldPolishClockSetup30.rc2" />
+    <None Include="..\Merge\Packed\rtf.exe" />
+    <None Include="..\small.ico" />
+    <None Include="..\Waves\tic.wav" />
+    <None Include="..\Waves\vopros.wav" />
+    <None Include="..\Waves\yes.wav" />
+    <None Include="RTF\en-info.monad-lic" />
+    <None Include="RTF\en-licence.monad-lic" />
+    <None Include="RTF\pl-info.monad-lic" />
+    <None Include="RTF\pl-licence.monad-lic" />
+    <None Include="RTF\ru-info.monad-lic" />
+    <None Include="RTF\ru-licence.monad-lic" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="OldPolishClockSetup3.0.manifest">
+      <SubType>Designer</SubType>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OldPolishClockSetup3.0.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\bzip2-1.0.6\libbz2.vcxproj">
+      <Project>{9683f3f6-5012-43d2-a539-4e6bd3a1142d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Edu_2008.vcxproj">
+      <Project>{d3d09108-96d0-4629-88b8-122c0256058c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Encrypt\Encrypt.vcxproj">
+      <Project>{f685dae3-5f88-4b6c-a4eb-27eee9177b54}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Merge\Merge.vcxproj">
+      <Project>{d3c28e8a-cec2-4242-bbff-a7c0c159897e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Setup\Setup.vdproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="OldPolishClockSetup3.0.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

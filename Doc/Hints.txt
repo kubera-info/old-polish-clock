@@ -1,0 +1,8 @@
+Czasem b³êdami rzuca "Core od Meshy", wystarczy wykomentowaæ...
+
+W kodzie jest zaszyta wersja instalatora.
+
+DDS bez DX mo¿e Ÿle parsowaæ niektóre (bardzo stare) tekstury.
+Dziêki prostocie jest trochê szybszy.
+
+!!!!!!!!! Release wykonaæ z pustego projektu, a¿eby wszystko zagra³o jako nowe. !!!!!!!!!

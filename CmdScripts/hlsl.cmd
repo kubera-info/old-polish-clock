@@ -1,0 +1,10 @@
+@echo off
+set FXC=%1
+set ROWC=%2
+set ENCRYPT=%3
+set METAFILE=%4
+set COMPILE=%5
+set OUTPUT=%6
+set BZIP2=%7
+set SHADER_TYPE=%8
+call %METAFILE%

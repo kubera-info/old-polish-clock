@@ -1,0 +1,12 @@
+The Old Polish Clock 3.0 Betha
+A Screen Saver under development
+
+Copyright (C) 2003-2012 by W³odzimierz O. Kubera
+All Rights Reserved
+Wszelkie Prawa Zastrze¿one
+
+Please, do not redistribute our software or process it in any kind.
+
+Authors:
+ Project Manager, Microsoft Developer: W³odzimierz O. Kubera
+ Music: Kirill Ponomarev

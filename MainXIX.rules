@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="Filess Copier"
+	Version="8,00"
+	>
+  <Rules>
+    <CustomBuildRule
+			Name="FileCopyCreator"
+			DisplayName="File Copy Creator"
+			CommandLine="&quot;$(SolutionDir)CmdScripts\copy.cmd&quot; &quot;$(InputPath)&quot; &quot;[TargetPath]&quot;"
+			Outputs="&quot;[TargetPath]\$(InputName).dll&quot;"
+			FileExtensions="*.dll"
+			ExecutionDescription="Copying Files"
+			>
+      <Properties>
+        <EnumProperty
+					Name="TargetPath"
+					DisplayName="Target Path"
+					Description="Sets the desired path of copied file"
+					>
+          <Values>
+            <EnumValue
+							Value="0"
+							Switch="$(SolutionDir)Release"
+							DisplayName="X86"
+						/>
+            <EnumValue
+							Value="1"
+							Switch="$(SolutionDir)Release X64"
+							DisplayName="X64"
+						/>
+            <EnumValue
+              Value="2"
+              Switch="$(SolutionDir)Debug"
+              DisplayName="Debug X86"
+						/>
+            <EnumValue
+              Value="3"
+              Switch="$(SolutionDir)Debug X64"
+              DisplayName="Debug X64"
+						/>
+          </Values>
+        </EnumProperty>
+      </Properties>
+    </CustomBuildRule>
+  </Rules>
+</VisualStudioToolFile>

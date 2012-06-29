@@ -1,0 +1,19 @@
+Tworzenie pliku koñcowego:
+Po³¹czenie internetowe niezbêdne.
+Zacommitowaæ wszystkie modyfikacja do serwera.
+Stworzyæ nowy katalog i pobraæ Ÿród³a z serwera.
+Usun¹æ BETA z resource version
+Zwiêkszyæ numeracjê.
+Zbudowaæ wszystko ³¹cznie z datami podpisu.
+Jeœli nie pojawi siê nowy DirectX, stworzyæ w³asny deployment przed t¹ operacj¹.
+Przetestowaæ na XP i na 7 64bit.
+Przed tym releasem skonsulotwaæ rosyjskie teksty z mam¹ i Kiri³³em.
+Polskie teksty z ojcem.
+Angisleki po znajomoœci.
+Daæ na tydzieñ testowania testerom.
+Wszyskie Copyrights musz¹ byæ.
+Sprawdziæ MonadDefine.h
+Upewniæ siê, ¿e wszystko podpisane
+Data w instalatorze dla k³¹dziownych plików musi byæ OK.
+Ustawiæ build z CVSa
+Sprawdziæ czy siê wszystko podpisa³o.

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup
+    Condition="'$(WinRarCreatorBeforeTargets)' == '' and '$(WinRarCreatorAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <WinRarCreatorBeforeTargets>Midl</WinRarCreatorBeforeTargets>
+    <WinRarCreatorAfterTargets>CustomBuild</WinRarCreatorAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <WinRarCreatorDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(WinRarCreatorDependsOn)</WinRarCreatorDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <WinRarCreator>
+      <CommandLineTemplate>       "%(FullPath)"        "$(SolutionDir)bin\rar.exe"        "$(ProjectDir)Packed\%(Filename).exe"       "$(SolutionDir)"</CommandLineTemplate>
+      <Outputs>$(ProjectDir)Packed\%(Filename).exe</Outputs>
+      <ExecutionDescription>Packaging Files</ExecutionDescription>
+    </WinRarCreator>
+  </ItemDefinitionGroup>
+</Project>

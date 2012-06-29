@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{9a2a9f7e-3870-4e59-bcf6-f48721a2469d}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{e5f43305-8479-4cbc-b5aa-8835777865ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Doc">
+      <UniqueIdentifier>{090833aa-c7ad-475d-98a3-5c1189cc63b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{d1c52022-f449-4ee1-9cfe-da703f01f8ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models and GUI">
+      <UniqueIdentifier>{65e886ac-f13e-4414-be04-53d91d3d2859}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models and GUI\A Place for Creatures">
+      <UniqueIdentifier>{fb2defc7-fe67-47fa-b01e-9ed7973e88c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models and GUI\A Place for Creatures\OldPolishClock">
+      <UniqueIdentifier>{5124d45b-135f-4dd5-9c2f-39da9fd64741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models and GUI\A Place for Creatures\Wall">
+      <UniqueIdentifier>{a147894b-26e0-47a4-aac6-8e1e56290c84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models and GUI\A Place for Creatures\Painting">
+      <UniqueIdentifier>{0afc1afd-a540-48ae-863f-fb801632d43e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models and GUI\OPC Core">
+      <UniqueIdentifier>{c9afb703-9138-49c3-88b4-0aa0cc96747a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="I18N">
+      <UniqueIdentifier>{57d96e2c-b35f-4a37-9124-82a2024f443d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XNAMath">
+      <UniqueIdentifier>{8b1b2b29-ff04-4515-8896-86969ff32f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{87923e9f-447d-47e1-a9bf-e02799778700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{33816ede-7c6d-4da9-a9e0-0290e1067105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window">
+      <UniqueIdentifier>{cfc5dd07-48bd-4b0b-9ae0-4d806320165f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monad%28a%29 Engine 2.0">
+      <UniqueIdentifier>{a068b134-dd76-42ee-bb0d-a9349d0b70e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monad%28a%29 Engine 2.0\Graphics">
+      <UniqueIdentifier>{bbe4ebfa-92f3-4d48-a8c9-dd2f8f4bab33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monad%28a%29 Engine 2.0\Patterns">
+      <UniqueIdentifier>{3ff53a06-41ad-42d3-88fb-ca0edad55370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monad%28a%29 Engine 2.0\System">
+      <UniqueIdentifier>{a9f6cb3b-b2b8-49ed-a6c3-d38fe5c0ab59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monad%28a%29 Engine 2.0\System\Singleton">
+      <UniqueIdentifier>{e1c4b0c4-e950-4761-8526-53c6676d9a13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monad%28a%29 Engine 2.0\Core">
+      <UniqueIdentifier>{35ac384b-063d-4322-9034-c064198df7b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monad%28a%29 Engine 2.0\Modules">
+      <UniqueIdentifier>{f78b24a6-28ae-4dbc-9536-e708b232c5d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monad%28a%29 Engine 2.0\Streaming">
+      <UniqueIdentifier>{bc7d172a-b6fc-413a-9712-bd27d8dfc5f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monad%28a%29 Engine 2.0\File Manager">
+      <UniqueIdentifier>{bc37c530-4454-4783-9677-f8c8e6f12405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DLL">
+      <UniqueIdentifier>{7853aa9e-3981-47d3-a9a5-ee417184a743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DLL\X64">
+      <UniqueIdentifier>{9bc87cbd-9046-4d5f-9aae-e8d65fc0d59b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DLL\X86">
+      <UniqueIdentifier>{adc19014-418a-44ce-a58f-b3af004b197f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="background.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Doc\Author.txt">
+      <Filter>Doc</Filter>
+    </None>
+    <None Include="Doc\changelog.txt">
+      <Filter>Doc</Filter>
+    </None>
+    <None Include="Doc\Dependencies.txt">
+      <Filter>Doc</Filter>
+    </None>
+    <None Include="Doc\Hints.txt">
+      <Filter>Doc</Filter>
+    </None>
+    <None Include="Doc\opc3.0.xml">
+      <Filter>Doc</Filter>
+    </None>
+    <None Include="Doc\Release.txt">
+      <Filter>Doc</Filter>
+    </None>
+    <None Include="Doc\Rules.txt">
+      <Filter>Doc</Filter>
+    </None>
+    <None Include="Doc\TODO.txt">
+      <Filter>Doc</Filter>
+    </None>
+    <None Include="Doc\Trash.txt">
+      <Filter>Doc</Filter>
+    </None>
+    <None Include="XNAMath\xnamathconvert.inl">
+      <Filter>XNAMath</Filter>
+    </None>
+    <None Include="XNAMath\xnamathmatrix.inl">
+      <Filter>XNAMath</Filter>
+    </None>
+    <None Include="XNAMath\xnamathmisc.inl">
+      <Filter>XNAMath</Filter>
+    </None>
+    <None Include="XNAMath\xnamathvector.inl">
+      <Filter>XNAMath</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Core\dpiaware.manifest">
+      <Filter>Resource Files</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Main.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Standard\MonadCatch.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="Standard\MonadSystem.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\ByteArray.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\I18N.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\MonadCipher.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\MonadFile.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\MonadHash.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\MonadLock.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\MonadParameter.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\MonadRegistry.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\MonadUniqueInstance.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\System.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="OPC-Camera.h">
+      <Filter>Models and GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\OPC-Globals.h">
+      <Filter>Models and GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="OPC-Shader.h">
+      <Filter>Models and GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="OPC-Struct.h">
+      <Filter>Models and GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\World.h">
+      <Filter>Models and GUI\A Place for Creatures</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\Casing.h">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\ClockFace.h">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\ClockTime.h">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\Hinge.h">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\Light.h">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\Metallic.h">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\Nut.h">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\OldPolishClock.h">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\wskaz.h">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\Wall.h">
+      <Filter>Models and GUI\A Place for Creatures\Wall</Filter>
+    </ClInclude>
+    <ClInclude Include="Painting\Painting.h">
+      <Filter>Models and GUI\A Place for Creatures\Painting</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\DictOPC.h">
+      <Filter>I18N</Filter>
+    </ClInclude>
+    <ClInclude Include="XNAMath\xnamath.h">
+      <Filter>XNAMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\CpuTopology.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Others\d3dsaver.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DXUT.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DXUTDevice11.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DXUTDevice9.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\DXUTmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Others\Monad_d3dcompiler.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional\SDKmesh.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\MonadWinVer.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\OPC-ConfigDialog.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\MonadMonitor.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\MonadThreadBuilder.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="OldPolishClock\MonadWindow.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Others\DDS.h">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Others\DDSTextureLoader.h">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\DeviceLevel.h">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\FVF.h">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Manager.h">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Matrices.h">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Monad.h">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\MonadShader.h">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\MonadState.h">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Skin.h">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\CProto.h">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\define.h">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\MonadEvents.h">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\MonadPtr.h">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Patterns\MonadRelease.h">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Patterns\MonadTemplates.h">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Patterns\Patterns.h">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes\SingleCall.h">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\MonadCOM.h">
+      <Filter>Monad%28a%29 Engine 2.0\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\MonadConvert.h">
+      <Filter>Monad%28a%29 Engine 2.0\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\MonadMath.h">
+      <Filter>Monad%28a%29 Engine 2.0\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\MonadTime.h">
+      <Filter>Monad%28a%29 Engine 2.0\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Factory.h">
+      <Filter>Monad%28a%29 Engine 2.0\System\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Singleton.h">
+      <Filter>Monad%28a%29 Engine 2.0\System\Singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="MetaDefine.h">
+      <Filter>Monad%28a%29 Engine 2.0\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Tootle\include\tootlelib.h">
+      <Filter>Monad%28a%29 Engine 2.0\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\MonadAudio\AudioFile.h">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\MonadAudio.h">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\MonadException.h">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\MonadThread.h">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\MonadTiming.h">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\MonadXML.h">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\MonadStreaming.h">
+      <Filter>Monad%28a%29 Engine 2.0\Streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\MonadTTS.h">
+      <Filter>Monad%28a%29 Engine 2.0\Streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager\FileManager.h">
+      <Filter>Monad%28a%29 Engine 2.0\File Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager\Path.h">
+      <Filter>Monad%28a%29 Engine 2.0\File Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Shared\MonadLibrary.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Standard\MonadSystem.cpp">
+      <Filter>stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\I18N.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\MonadCipher.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\MonadFile.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\MonadHash.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\MonadLock.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\MonadParamater.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\MonadRegistry.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\MonadUniqueInstance.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\System.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="OPC-Camera.cpp">
+      <Filter>Models and GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\OPC-Globals.cpp">
+      <Filter>Models and GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="OPC-Shader.cpp">
+      <Filter>Models and GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="OPC-Struct.cpp">
+      <Filter>Models and GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\World.cpp">
+      <Filter>Models and GUI\A Place for Creatures</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\Casing.cpp">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\ClockFace.cpp">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\ClockTime.cpp">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\Hinge.cpp">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\Light.cpp">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\Metallic.cpp">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\Nut.cpp">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\OldPolishClock.cpp">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\wskaz.cpp">
+      <Filter>Models and GUI\A Place for Creatures\OldPolishClock</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\Wall.cpp">
+      <Filter>Models and GUI\A Place for Creatures\Wall</Filter>
+    </ClCompile>
+    <ClCompile Include="Painting\Painting.cpp">
+      <Filter>Models and GUI\A Place for Creatures\Painting</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\BackCasingCore-$$$.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\BackCasingCore-$$$2.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\BackCasingCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\BackHookCore-$$$.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\BackHookCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\BoxCasingCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\CasingCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\HingeCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\HookCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="HTML\HRCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\MetalCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\MiddleHookCore-$$$.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\MiddleHookCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\MonadBisorter.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\MountCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\NailCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\NutCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\OrnamentCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Painting\PaintingCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\PendulumCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\StringCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\TessellationCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\WallCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\WeightCore.cpp">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\DictOPC.cpp">
+      <Filter>I18N</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\CpuTopology.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\d3dsaver.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DXUT.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DXUTDevice11.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DXUTDevice9.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\DXUTmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Optional\SDKmesh.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="Config\OPC-ConfigDialog.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\MonadMonitor.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Shared\MonadThreadBuilder.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="OldPolishClock\MonadWindow.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Others\DDSTextureLoader.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\DeviceLevel.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\FVF.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Manager.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Matrices.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Monad.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\MonadShader.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\MonadState.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Skin.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\CProto.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\MonadEvents.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\MonadPtr.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="Patterns\MonadTemplates.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="Patterns\Patterns.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="Classes\SingleCall.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Patterns</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\MonadCOM.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\MonadConvert.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\MonadMath.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\MonadTime.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Factory.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\System\Singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Singleton.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\System\Singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\MeshCore.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\MonadAudio\AudioFile.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\MonadAudio\MonadAudio.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\MonadException\MonadException.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\MonadThread\MonadThread.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\MonadTiming\MonadTiming.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\MonadXML\MonadXML.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\MonadStreaming.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\MonadTTS.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\Streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager\FileManager.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\File Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager\Path.cpp">
+      <Filter>Monad%28a%29 Engine 2.0\File Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Shared\MonadLibrary.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="Clock3Icon.png">
+      <Filter>Resource Files</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Sign\exe.p12">
+      <Filter>Resource Files</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\BackCasingCore-$$$.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\BackCasingCore-$$$2.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\BackCasingCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\BackHookCore-$$$.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\BackHookCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\BoxCasingCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\CasingCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\HingeCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\HookCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="HTML\HRCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\MetalCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\MiddleHookCore-$$$.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\MiddleHookCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\MonadBisorter.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\MountCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\NailCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\NutCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\OrnamentCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Painting\PaintingCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\PendulumCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\StringCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\TessellationCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\WallCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="OldPolishClock\WeightCore.h">
+      <Filter>Models and GUI\OPC Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Engine\MeshCore.h">
+      <Filter>Monad%28a%29 Engine 2.0\Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Tootle\lib\TootleSoftwareOnlyStatic_2k8_MT_d.lib">
+      <Filter>Monad%28a%29 Engine 2.0\Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="Tootle\lib\TootleSoftwareOnlyStatic_2k8_MT_d64.lib">
+      <Filter>Monad%28a%29 Engine 2.0\Core</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="MainXIX.rules" />
+  </ItemGroup>
+  <ItemGroup>
+    <FileCopyCreator Include="DLL\X64\d3dcompiler_45.dll">
+      <Filter>DLL\X64</Filter>
+    </FileCopyCreator>
+    <FileCopyCreator Include="DLL\X86\d3dcompiler_45.dll">
+      <Filter>DLL\X86</Filter>
+    </FileCopyCreator>
+  </ItemGroup>
+</Project>

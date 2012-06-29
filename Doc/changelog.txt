@@ -1,0 +1,54 @@
+2011-08-08 Volume Texture FVF has been added (but not used finally)
+2011-08-09 Proper Date-time format in XML Log
+2011-08-09 SSE has been enabled in the installer
+2011-08-10 new instead of aligned alloc in math
+2011-08-12 File Man optimized a bit (removed shared_ptr).
+2011-08-15 Now installer can reboot because of DirectX
+2011-08-19 From now, CPUs without SSE are not supported at all (setup will be not running)
+2011-08-19 CAmIUnique class has been created and unique installation
+2011-08-20 The canonical call of MsiExec.exe with the full System32 path
+2011-08-20 Cancellation available in setup binary
+2011-08-20 MessageBox in Setup was unified
+2011-09-17 Reboot possible after app. deployment (in case of problems)
+2011-09-17 Thread's locale is altered with language
+2011-09-17 Good DirectXSetup errors support
+2011-09-18 Mutexes in setup
+2011-09-24 Safer smart pointers, better XML
+2011-09-24 Anisotropic samplers insted of linear
+2011-09-26 Nut optimized and normalized
+2011-09-28 Bricks optimized
+2011-10-02 Smooth movement of hands
+2011-10-02 Changed order of models renderings because of the back buffer
+2011-10-03 Better metallic
+2011-10-15 Better stability, exceptions and file man.
+2011-10-15 RTFs has been obfuscated
+2011-10-22 Today :) : screen saver, but unstable
+2011-10-22 Disabling compositions in full screen mode
+2011-10-22 I18N under implementing
+2011-10-23 Stable wave voice
+2011-10-29 Added FPS control with idle time
+2011-11-04 Exceptions without the thread pool
+2011-11-11 XML parser has been added
+2011-11-16 Authenticode added
+2011-11-26 Minor improovements (std::wstring instead of std::wstring and WCHAR *, etc.)
+2011-11-26 Weights and strings has been added
+2011-12-04 Conversions through streams
+2011-12-04 Minor optimizations
+2011-12-13 Streaming: one file + one cached :)
+2011-12-16 TTS support has been added with I18N (not all waves collected)
+2011-12-20 Lastly ~10 bugs has been removed :)
+2012-02-08 XM_NO_OPERATOR_OVERLOADS
+2012-03-12 Correct OOP for Audio
+2012-03-22 Pendulum has been added and works :)
+2012-03-28 D3DCompiler_44 added
+2012-03-30 Code a bit simplier and faster
+2012-04-03 Similar to above
+2012-04-07 Config window has been finished
+2012-04-13 Switching monitors
+2012-04-13 Silence before saing time
+2012-04-20 Multimonitor support
+2012-04-28 D2D1 support
+2012-05-12 Works without sound device
+2012-05-20 The models has been finished
+2012-05-26 Release Candidate without the licence and translations
+2012-05-28 Beta started

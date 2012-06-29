@@ -1,0 +1,557 @@
+#include "struct-11.fxh"
+#include "light.fxh"
+
+Texture2D Tex0 : register( t6 );
+Texture2D Tex1 : register( t7 );
+SamplerState Sampler : register( s1 );
+
+cbuffer cMetal : register( b3 )
+{
+	float3 BrightColor   : packoffset( c0 );
+	float3 DarkColor     : packoffset( c1 );
+	float3 FresnelColor  : packoffset( c2 );
+}
+
+// Textures morphing factor
+cbuffer cLerp : register( b4 )
+{
+	float4 fLerp   : packoffset( c0 );
+}
+
+cbuffer cWood : register( b5 )
+{
+	float4 g_WoodBright;
+	float4 g_WoodDark;
+}
+
+static float3 g_GlassColor = float3( .97, .97, 1.0 );
+static float4 Mtrl_Color = float4( .12, .12, .12, 1.0 );
+
+struct VS_OUTPUT 
+{
+	float4 Diffuse:				COLOR0;
+	float4 Ambient:				COLOR1;
+	float4 VertPos:				SV_Position;
+    float4 ProjectedCoord:		TEXCOORD0;
+    float4 ProjectedCoord1:		TEXCOORD1;
+    float4 ProjectedCoord2:		TEXCOORD2;
+};
+
+struct VS_OUTPUT_SPEC_HAND
+{
+    float2 Brightness:			TEXCOORD0;  
+	float4 Diffuse:				COLOR0;
+	float4 Ambient:				COLOR1;
+	float4 VertPos:				SV_Position;
+    float4 ProjectedCoord:		TEXCOORD1;
+    float4 ProjectedCoord1:		TEXCOORD2;
+    float4 ProjectedCoord2:		TEXCOORD3;
+};
+
+struct VS_OUTPUT_TEX
+{
+	float4 Diffuse:				COLOR0;
+	float4 Ambient:				COLOR1;
+    float2 Texture:				TEXCOORD0;
+	float4 VertPos:				SV_Position;
+    float4 ProjectedCoord:		TEXCOORD1;
+    float4 ProjectedCoord1:		TEXCOORD2;
+    float4 ProjectedCoord2:		TEXCOORD3;
+};
+
+struct VS_OUTPUT_SPEC
+{
+    float2 Brightness:			TEXCOORD0;  
+	float4 VertPos:				SV_Position;
+    float4 ProjectedCoord:		TEXCOORD1;
+    float4 ProjectedCoord1:		TEXCOORD2;
+    float4 ProjectedCoord2:		TEXCOORD3;
+};
+
+struct VS_OUTPUT_SPEC_TEX
+{
+    float2 Brightness:			TEXCOORD0;  
+	float4 Diffuse:				COLOR0;
+	float4 Ambient:				COLOR1;
+	float2 Texture:				TEXCOORD1;
+	float4 VertPos:				SV_Position;
+    float4 ProjectedCoord:		TEXCOORD2;
+    float4 ProjectedCoord1:		TEXCOORD3;
+    float4 ProjectedCoord2:		TEXCOORD4;
+};
+
+struct VS_OUTPUT_POS
+{
+    float4 Position  : SV_Position;
+};
+
+struct VS_OUTPUT_METAL
+{
+    float3 Brightness:			TEXCOORD0;               
+    float4 Position:			SV_Position;
+    float4 ProjectedCoord:		TEXCOORD1;
+    float4 ProjectedCoord1:		TEXCOORD2;
+    float4 ProjectedCoord2:		TEXCOORD3;
+};
+
+struct VS_OUTPUT_METAL_TEX
+{
+    float3 Brightness:			TEXCOORD0;               
+    float2 Texture:				TEXCOORD1;
+    float4 Position:			SV_Position;
+    float4 ProjectedCoord:		TEXCOORD2;
+    float4 ProjectedCoord1:		TEXCOORD3;
+    float4 ProjectedCoord2:		TEXCOORD4;
+};
+
+
+VS_OUTPUT vs_main( VS_INPUT Input )
+{
+	VS_OUTPUT Out;
+
+	const float3 worldPos = mul( Input.Pos, g_mModel ).xyz;
+	const float3 worldNormal = normalize( mul( Input.Normal, ( float3x3 ) g_mModel ) );
+	const float4 projPos = mul( Input.Pos, g_mModelViewProj );
+
+	// Move model to the pixel shader
+	Out.VertPos = projPos;
+	const float3 PixPos = Light1_Position - worldPos;
+	const float Distance = length( PixPos );
+	Out.Diffuse = DiffuseColor( PixPos, worldNormal, Distance );
+	Out.Ambient = AmbientColor( Distance );
+	
+    // transform model-space vertex position to light-space:
+    Out.ProjectedCoord = mul( Input.Pos, TexTransform );
+    Out.ProjectedCoord1 = mul( Input.Pos, TexTransform1 );
+    Out.ProjectedCoord2 = mul( Input.Pos, TexTransform2 );
+
+	return Out;
+}
+
+VS_OUTPUT_TEX vs_main_tex( VS_INPUT_TEX Input )
+{
+	VS_OUTPUT_TEX Out;
+
+	const float3 worldPos = mul( Input.Pos, g_mModel ).xyz;
+	const float3 worldNormal = normalize( mul( Input.Normal, ( float3x3 ) g_mModel ) );
+	const float4 projPos = mul( Input.Pos, g_mModelViewProj );
+
+	// Move model to the pixel shader
+	Out.VertPos = projPos;
+	const float3 PixPos = Light1_Position - worldPos;
+	Out.Texture = Input.Texture;
+	const float Distance = length( PixPos );
+	Out.Diffuse = DiffuseColor( PixPos, worldNormal, Distance );
+	Out.Ambient = AmbientColor( Distance );
+
+    // transform model-space vertex position to light-space:
+    Out.ProjectedCoord = mul( Input.Pos, TexTransform );
+    Out.ProjectedCoord1 = mul( Input.Pos, TexTransform1 );
+    Out.ProjectedCoord2 = mul( Input.Pos, TexTransform2 );
+
+	return Out;
+}
+
+VS_OUTPUT_TEX vs_wood( VS_INPUT_TEX Input )
+{
+	VS_OUTPUT_TEX Out;
+
+	const float3 worldPos = mul( Input.Pos, g_mModel ).xyz;
+	const float3 worldNormal = normalize( mul( Input.Normal, ( float3x3 ) g_mModel ) );
+	const float4 projPos = mul( Input.Pos, g_mModelViewProj );
+
+	// Move model to the pixel shader
+	Out.VertPos = projPos;
+	const float3 PixPos = Light1_Position - worldPos;
+	Out.Texture = Input.Texture;
+	const float Distance = length( PixPos );
+	Out.Diffuse = DiffuseColor( PixPos, worldNormal, Distance );
+	Out.Ambient = AmbientColor( Distance );
+
+    // transform model-space vertex position to light-space:
+    Out.ProjectedCoord = mul( Input.Pos, TexTransform );
+    Out.ProjectedCoord1 = mul( Input.Pos, TexTransform1 );
+    Out.ProjectedCoord2 = mul( Input.Pos, TexTransform2 );
+
+	return Out;
+}
+
+VS_OUTPUT_TEX vs_main_brick_tex( VS_INPUT_TEX Input )
+{
+	VS_OUTPUT_TEX Out;
+
+	const float3 worldPos = mul( Input.Pos, g_mModel ).xyz;
+
+	// Move model to the pixel shader
+	
+	const float3 PixPos = Light1_Position - worldPos;
+	const float Distance = length( PixPos );
+	const float AmbientFactor = AmbientColorMinus( Distance );
+
+	if( AmbientFactor > -.5 ) // Discard invisible
+	{
+		const float3 worldNormal = normalize( mul( Input.Normal, ( float3x3 ) g_mModel ) );
+		const float4 projPos = mul( Input.Pos, g_mModelViewProj );
+		Out.VertPos = projPos;
+		Out.Ambient = float4( Light_Ambient * AmbientFactor, 1.0 );		
+		Out.Diffuse = DiffuseColor( PixPos, worldNormal, Distance );
+		Out.Texture = Input.Texture;
+
+		// transform model-space vertex position to light-space:
+		Out.ProjectedCoord = mul( Input.Pos, TexTransform );
+		Out.ProjectedCoord1 = mul( Input.Pos, TexTransform1 );
+		Out.ProjectedCoord2 = mul( Input.Pos, TexTransform2 );
+	}
+	else
+	{
+		Out.Ambient = float4( 0.0, 0.0, 0.0, 0.0 );
+		Out.Diffuse = float4( 0.0, 0.0, 0.0, 0.0 );
+		Out.Texture = float2( 0.0, 0.0 );
+		Out.VertPos = float4( 0.0, 0.0, 0.0, -1.0 );
+		Out.ProjectedCoord = float4( 0.0, 0.0, 0.0, 0.0 );
+	}
+		
+	return Out;
+}
+
+VS_OUTPUT_SPEC_TEX vs_main_specular_tex( VS_INPUT_TEX Input )
+{
+	VS_OUTPUT_SPEC_TEX Out;
+
+	const float3 worldPos = mul( Input.Pos, g_mModel ).xyz;
+	const float3 worldNormal = normalize( mul( Input.Normal, ( float3x3 ) g_mModel ) );
+	const float4 projPos = mul( Input.Pos, g_mModelViewProj );
+
+	// Move model to the pixel shader
+	Out.VertPos = projPos;
+	const float3 PixPos = Light1_Position - worldPos;
+	Out.Texture = Input.Texture;
+
+	const float Distance = length( PixPos );
+	Out.Diffuse = DiffuseColor2( PixPos, worldNormal ) * 0.7;
+	Out.Ambient = float4( Light_Ambient * 0.225, 1.0 );
+
+	const float3 V = -normalize(worldPos); 
+    const float3 H = normalize(PixPos + V);                                // half vector (view space)	
+
+    float f = 0.5 - dot(V, worldNormal); f = 1 - 4 * f * f;              // fresnel term
+    
+    const float Specular = pow( saturate( dot( H, worldNormal ) ), 32.0 );
+    Out.Brightness.x = Specular * .88;
+    Out.Brightness.y = f * .1666;
+
+
+    // transform model-space vertex position to light-space:
+    Out.ProjectedCoord = mul( Input.Pos, TexTransform );
+    Out.ProjectedCoord1 = mul( Input.Pos, TexTransform1 );
+    Out.ProjectedCoord2 = mul( Input.Pos, TexTransform2 );    
+
+	return Out;
+}
+
+VS_OUTPUT_SPEC_HAND vs_main_specular_hand( VS_INPUT Input )
+{
+	VS_OUTPUT_SPEC_HAND Out;
+
+	const float3 worldPos = mul( Input.Pos, g_mModel ).xyz;
+	const float3 worldNormal = normalize( mul( Input.Normal, ( float3x3 ) g_mModel ) );
+	const float4 projPos = mul( Input.Pos, g_mModelViewProj );
+
+	// Move model to the pixel shader
+	Out.VertPos = projPos;
+	const float3 PixPos = Light1_Position - worldPos;
+
+	const float Distance = length( PixPos );
+	Out.Diffuse = DiffuseColor2( PixPos, worldNormal );
+	Out.Ambient = AmbientColor( Distance );
+
+	const float3 V = -normalize(worldPos); 
+    const float3 H = normalize(PixPos + V);                                // half vector (view space)	
+
+    //Out.Brightness.x = dot( worldNormal, PixPos );
+    //Out.Brightness.x *= Out.Brightness.x * .5;
+    float f = 0.5 - dot(V, worldNormal); f = 1 - 4 * f * f;              // fresnel term
+    
+    float Specular = pow( saturate( dot( H, worldNormal ) ), 22.0 );
+    Out.Brightness.x = Specular;
+    Out.Brightness.y = f * 0.0625;
+
+    // transform model-space vertex position to light-space:
+    Out.ProjectedCoord = mul( Input.Pos, TexTransform );
+    Out.ProjectedCoord1 = mul( Input.Pos, TexTransform1 );
+    Out.ProjectedCoord2 = mul( Input.Pos, TexTransform2 );    
+
+	return Out;
+}
+
+VS_OUTPUT_SPEC vs_main_specular_glass( VS_INPUT Input )
+{
+	VS_OUTPUT_SPEC Out;
+
+	const float3 worldPos = mul( Input.Pos, g_mModel ).xyz;
+	const float3 worldNormal = normalize( mul( Input.Normal, ( float3x3 ) g_mModel ) );
+	const float4 projPos = mul( Input.Pos, g_mModelViewProj );
+
+	// Move model to the pixel shader
+	Out.VertPos = projPos;
+	const float3 PixPos = Light1_Position - worldPos;
+
+	const float3 V = -normalize(worldPos); 
+    const float3 H = normalize(PixPos + V);                                // half vector (view space)	
+
+    //Out.Brightness.x = dot( worldNormal, PixPos );
+    //Out.Brightness.x *= Out.Brightness.x * .5;
+    float f = 0.5 - dot(V, worldNormal); f = 1 - 4 * f * f;              // fresnel term
+    
+    const float Specular = pow( saturate( dot( H, worldNormal ) ), 32 );
+    Out.Brightness.x = min( Specular * 1.8, .88 );
+    Out.Brightness.y = f * .1666;
+
+    // transform model-space vertex position to light-space:
+    Out.ProjectedCoord = mul( Input.Pos, TexTransform );
+    Out.ProjectedCoord1 = mul( Input.Pos, TexTransform1 );
+    Out.ProjectedCoord2 = mul( Input.Pos, TexTransform2 );
+
+	return Out;
+}
+
+VS_OUTPUT_POS vs_ambient_glass( VS_INPUT Input )
+{
+	VS_OUTPUT_POS Out;
+
+	const float4 projPos = mul( Input.Pos, g_mModelViewProj );
+
+	Out.Position = projPos;
+	
+	return Out;
+}
+
+VS_OUTPUT_SPEC_TEX vs_main_specular_wood( VS_INPUT_TEX Input )
+{
+	VS_OUTPUT_SPEC_TEX Out;
+
+	const float3 worldPos = mul( Input.Pos, g_mModel ).xyz;
+	const float3 worldNormal = normalize( mul( Input.Normal, ( float3x3 ) g_mModel ) );
+	const float4 projPos = mul( Input.Pos, g_mModelViewProj );
+
+	// Move model to the pixel shader
+	Out.VertPos = projPos;
+	const float3 PixPos = Light1_Position - worldPos;
+	Out.Texture = Input.Texture;
+
+	const float Distance = length( PixPos );
+	Out.Diffuse = DiffuseColor( PixPos, worldNormal, Distance ) * 0.233;
+	Out.Ambient = AmbientColor( Distance ) * 0.2;
+
+	const float3 V = -normalize(worldPos); 
+    const float3 H = normalize(PixPos + V);                                // half vector (view space)	
+
+    //Out.Brightness.x = dot( worldNormal, PixPos );
+    //Out.Brightness.x *= Out.Brightness.x * .5;
+    //float f = 0.5 - dot(V, worldNormal); f = 1 - 4 * f * f;              // fresnel term
+    
+    const float Specular = pow( saturate( dot( H, worldNormal ) ), 4 );
+    Out.Brightness.x = Specular;                                                     
+    Out.Brightness.y = 0.0;
+    //Out.Brightness.y = f / 6;
+
+
+    // transform model-space vertex position to light-space:
+    Out.ProjectedCoord = mul( Input.Pos, TexTransform );
+    Out.ProjectedCoord1 = mul( Input.Pos, TexTransform1 );
+    Out.ProjectedCoord2 = mul( Input.Pos, TexTransform2 );    
+
+	return Out;
+}
+
+// Vertex shader
+VS_OUTPUT_METAL VS(  
+	VS_INPUT Input )
+{
+    VS_OUTPUT_METAL Out = (VS_OUTPUT_METAL)0;
+
+    const float3 P = mul(Input.Pos, (float4x3)g_mModel);   // position (view space)
+    const float3 Lnew = normalize( Light1_Position - P );
+    const float3 N = normalize(mul(Input.Normal, (float3x3)g_mModel));     // normal (view space)
+    const float3 V = -normalize(P);                                   // view direction (view space)
+    const float3 H = normalize(Lnew + V);                                // half vector (view space)
+    // Position (projected)
+    Out.Position = mul(Input.Pos, g_mModelViewProj);             
+    Out.Brightness.x = dot( N, Lnew );
+    Out.Brightness.x *= Out.Brightness.x * .2;
+    float f = 0.5 - dot(V, N); f = 1 - 4 * f * f;              // fresnel term
+    
+    float Specular = pow( saturate( dot( H, N ) ), 7.0 ); // , 4.0 );
+    Out.Brightness.y = Specular;
+    Out.Brightness.z = f * .3;
+    
+    Out.ProjectedCoord = mul( Input.Pos, TexTransform );
+    Out.ProjectedCoord1 = mul( Input.Pos, TexTransform1 );
+    Out.ProjectedCoord2 = mul( Input.Pos, TexTransform2 );
+    
+    return Out;
+}
+
+// Vertex shader
+VS_OUTPUT_METAL_TEX VS_TEX(    
+    VS_INPUT_TEX Input )
+{
+    VS_OUTPUT_METAL_TEX Out = (VS_OUTPUT_METAL_TEX)0;
+    Out.Texture = Input.Texture;
+    const float3 P = mul(Input.Pos, (float4x3)g_mModel);   // position (view space)
+    const float3 Lnew = normalize( Light1_Position - P );
+    const float3 N = normalize(mul(Input.Normal, (float3x3)g_mModel));     // normal (view space)
+    const float3 V = -normalize(P);                                   // view direction (view space)
+    const float3 H = normalize(Lnew + V);                                // half vector (view space)
+    // Position (projected)
+    Out.Position = mul(Input.Pos, g_mModelViewProj);             
+    Out.Brightness.x = dot( N, Lnew ) / 4;
+    float f = 0.5 - dot(V, N); f = 1 - 4 * f * f;              // fresnel term
+    
+    float Specular = saturate( dot( H, N ) );
+    Specular *= Specular;                        
+    Specular *= .3;
+    Out.Brightness.y = Specular;
+    Out.Brightness.z = f;
+       
+    Out.ProjectedCoord = mul( Input.Pos, TexTransform );
+    Out.ProjectedCoord1 = mul( Input.Pos, TexTransform1 );
+    Out.ProjectedCoord2 = mul( Input.Pos, TexTransform2 );    
+    
+    return Out;
+}
+
+/////////// PS ////////////
+
+
+// Pixel shader
+float4 PS(VS_OUTPUT_METAL In) : SV_Target
+{
+    const float shadow = ps_shadow_blur( In.ProjectedCoord, In.ProjectedCoord1, In.ProjectedCoord2 );
+	float4 Color;
+	const float Gloss = In.Brightness.z;
+	const float Specular = pow( In.Brightness.y, 4.0 ) * .86;
+	float3 ColorLerp = float3( In.Brightness.x, In.Brightness.x, In.Brightness.x );
+	ColorLerp += ( Specular + FresnelColor * Gloss ) * shadow;
+    Color.rgb = lerp( DarkColor, BrightColor, ColorLerp );
+    Color.rgb *= Light1_Color.rgb;
+    
+    Color.w   = 1.0;
+
+    return Color;
+}  
+
+// Pixel shader
+float4 PS_TEX(VS_OUTPUT_METAL_TEX In) : SV_Target 
+{
+    const float shadow = ps_shadow_blur( In.ProjectedCoord, In.ProjectedCoord1, In.ProjectedCoord2 );
+	float4 Color;
+	const float Specular = In.Brightness.y * In.Brightness.y;
+	const float Gloss = In.Brightness.z;
+	float3 ColorLerp = float3( In.Brightness.x, In.Brightness.x, In.Brightness.x );
+	ColorLerp += Specular;
+	ColorLerp += Gloss;
+    Color = Tex0.Sample( Sampler, In.Texture );
+    Color.xyz *= ColorLerp;
+    Color.xyz += ColorLerp;
+    Color.xyz *= shadow;
+    Color.rgb *= Light1_Color.rgb * .5 + Light_Ambient * .125;
+    Color.w = 1.0;
+
+    return Color;
+}  
+
+float4 ps_main(
+	VS_OUTPUT IN
+    ) : SV_Target  
+{
+   const float shadow = ps_shadow_blur( IN.ProjectedCoord, IN.ProjectedCoord1, IN.ProjectedCoord2 );
+   return IN.Diffuse * shadow + IN.Ambient;
+}
+
+float4 ps_main_tex(
+	VS_OUTPUT_TEX IN
+	) : SV_Target  
+{
+   const float shadow = ps_shadow_blur( IN.ProjectedCoord, IN.ProjectedCoord1, IN.ProjectedCoord2 );
+   return ( IN.Diffuse * shadow + IN.Ambient ) * Tex0.Sample( Sampler, IN.Texture );
+}
+
+float4 ps_main_tex_wood(
+	VS_OUTPUT_TEX IN
+	) : SV_Target  
+{
+   const float shadow = ps_shadow_blur( IN.ProjectedCoord, IN.ProjectedCoord1, IN.ProjectedCoord2 );
+   const float4 diffuse = IN.Diffuse * shadow;
+   return ( diffuse + IN.Ambient ) * lerp( g_WoodDark, g_WoodBright, Tex0.Sample( Sampler, IN.Texture ) );
+}
+
+float4 ps_main_specular_hand(
+	VS_OUTPUT_SPEC_HAND In
+    ) : SV_Target  
+{
+    const float shadow = sqrt( ps_shadow_blur( In.ProjectedCoord, In.ProjectedCoord1, In.ProjectedCoord2 ) );
+	const float Gloss = In.Brightness.y;
+	const float Specular = pow( In.Brightness.x, 4.0 );
+	const float4 alpha = Light1_Color * ( Specular + Gloss );
+   return ( In.Diffuse + float4(Light_Ambient, 1.0 ) + alpha ) * shadow * Mtrl_Color;
+}
+
+float4 ps_main_specular_glass(
+	VS_OUTPUT_SPEC In
+    ) : SV_Target  
+{
+	const float shadow = ps_shadow_blur( In.ProjectedCoord, In.ProjectedCoord1, In.ProjectedCoord2 );
+	const float Gloss = In.Brightness.y;
+	const float Specular = pow( In.Brightness.x, 4.0 );
+	const float alpha = ( Specular + Gloss ) * shadow;
+    
+   clip( alpha - .025 );
+   return float4( Light1_Color.rgb * g_GlassColor, alpha );
+}
+
+float4 ps_ambient_glass(
+	VS_OUTPUT_POS In
+    ) : SV_Target  
+{
+	return float4( g_GlassColor, .125 );
+}
+
+float4 ps_main_specular_wood(
+	VS_OUTPUT_SPEC_TEX In
+    ) : SV_Target  
+{
+    const float shadow = ps_shadow_blur( In.ProjectedCoord, In.ProjectedCoord1, In.ProjectedCoord2 );
+	const float Specular = pow( In.Brightness.x, 8.0 );	
+	const float SpecularColor = Specular * shadow;
+	const float4 TexCol = Tex0.Sample( Sampler, In.Texture );
+
+    return ( In.Diffuse + In.Ambient ) * TexCol + SpecularColor * ( 1.0 - TexCol.r * .25 ) * shadow;
+}
+
+float4 ps_main_specular_tex(
+	VS_OUTPUT_SPEC_TEX In
+    ) : SV_Target  
+{
+    const float shadow = ps_shadow_blur( In.ProjectedCoord, In.ProjectedCoord1, In.ProjectedCoord2 );
+	const float Gloss = In.Brightness.y;
+	const float Specular = pow( In.Brightness.x, 8.0 );
+	const float SpecularColor = ( Specular + Gloss );
+
+    return ( ( In.Diffuse + SpecularColor ) * ( shadow * .7 + .3 )
+    + In.Ambient ) * Tex0.Sample( Sampler, In.Texture );
+}
+
+float4 ps_main_specular_tex_2(
+	VS_OUTPUT_SPEC_TEX In
+    ) : SV_Target 
+{
+	const float4 colorTex0 = Tex0.Sample( Sampler, In.Texture );
+	const float4 colorTex1 = Tex1.Sample( Sampler, In.Texture );
+    const float shadow = ps_shadow_blur( In.ProjectedCoord, In.ProjectedCoord1, In.ProjectedCoord2 );
+	const float Gloss = In.Brightness.y;
+	const float Specular = pow( In.Brightness.x, 8.0 );	
+	const float SpecularColor = ( Specular + Gloss );
+   	return ( ( In.Diffuse + SpecularColor ) * ( shadow * .7 + .3 )
+	+ In.Ambient ) * lerp( colorTex1, colorTex0, fLerp );
+}

@@ -1,0 +1,13 @@
+Languages: VBS, C++, C#
+
+Used:
+DirectX Framework
+Windows 7 SDK
+boost
+bzip2
+Tootle (by AMD)
+A texture from GIMP has been used (wood)
+WinRar SFX
+xWMA parser from Internet
+Foto from "Dvenadtat' Stul'ev'
+screnc.exe

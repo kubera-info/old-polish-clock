@@ -1,0 +1,592 @@
+//--------------------------------------------------------------------------------------
+void CDXUTExtWindow::MoveDialog(
+								int offsetX,
+								int offsetY)
+{
+	POINT pos;
+	GetLocation( pos );
+	SetLocation( pos.x + offsetX, pos.y + offsetY );
+	/*CDXUTControl * pCtrl = GetFirstControl();
+	if( pCtrl )
+		while( this == pCtrl->m_pDialog )
+		{
+			pCtrl->SetLocation( pCtrl->m_x + offsetX, pCtrl->m_y + offsetY );
+			pCtrl = GetNextControl( pCtrl );
+		}* /
+}*/
+
+
+/*CRunnable & CRunnable::operator=(const CRunnable & Source)
+{
+m_hr = Source.m_hr;
+m_WM_APP_ID = Source.m_WM_APP_ID;
+
+return *this;
+}*/
+
+/*#define MONAD_ERR_SUCCESS (S_OK)
+#define MONAD_ERR_OUT_OF_MEM (1)
+#define MONAD_ERR_FILE_NOT_FOUND (2)
+#define MONAD_ERR_DIRECT3D_NO_CAPS (3)
+#define MONAD_ERR_XAUDIO2_NO_CAPS (4)
+#define MONAD_ERR_NO_INIT (5)*/
+
+
+//--------------------------------------------------------------------------------------
+/*	void RemoveUnused()
+	{
+		return;
+		for( int mVert = mVertices.GetSize() - 1; mVert >= 0; mVert -- )
+		{
+			bool bFound = false;
+			for( int mInd = 0; mInd < mIndices.GetSize(); mInd ++ )
+				if( (int) mIndices[mInd] == mVert )
+				{
+					bFound = true;
+					break;
+				}
+				if( !bFound )
+				{
+					mVertices.RemoveAt( mVert );
+					for( int mInd = 0; mInd < mIndices.GetSize(); mInd ++ )
+						if( (int) mIndices[mInd] > mVert )
+							mIndices[mInd] --;
+				}
+		}
+	}*/
+
+
+//--------------------------------------------------------------------------------------
+	/*if( pFileHolder.GetPureName().Compare( L"ornmnt" ) == 0 )
+	{
+		class CBuildClockOrnament : public CMeshBuilderPlain
+		{
+		public:
+			/*void AddFrame()
+			{
+				VERTEXPLAIN a, b, c, d;
+				const float z = -0.07;
+				const float left = -.3f;
+				const float right = .3f;
+				const float top = -.3f;
+				const float bottom = .3f;
+				/*const float z = -0.052;
+				const float left = -.18f;
+				const float right = .18f;
+				const float top = -.0928f;
+				const float bottom = .0928f;* /
+				a.nrm = b.nrm = c.nrm = d.nrm = D3DXVECTOR3( 0.0f, 0.0f, -1.0f );
+				a.pos = D3DXVECTOR3( left, top, z );
+				b.pos = D3DXVECTOR3( right, top, z );
+				c.pos = D3DXVECTOR3( right, bottom, z );
+				d.pos = D3DXVECTOR3( left, bottom, z );
+
+				AddTriangle( a, b, c );
+				AddTriangle( b, c, d );
+				AddTriangle( c, d, a );
+			}*/
+
+/*			virtual void OnParseTriangle( VERTEXPLAIN & a, VERTEXPLAIN & b, VERTEXPLAIN & c ) throw(...)
+			{
+				AddTriangle( a, c, b );
+/*
+				const float z = -0.07;
+				const float left = -.3f;
+				const float right = .3f;
+				const float top = -.3f;
+				const float bottom = .3f;
+
+				const float z2 = -0.052;
+				const float left2 = -.18f;
+				const float right2 = .18f;
+				const float top2 = -.0928f;
+				const float bottom2 = .0928f;
+
+				if(
+					!( a.pos[2] < z && b.pos[2] < z && c.pos[2] < z
+					      && a.pos[0] > left && a.pos[0] < right
+						  && a.pos[1] > top && a.pos[1] < bottom)
+					&&
+					!( a.pos[2] < z2 && b.pos[2] < z2 && c.pos[2] < z2
+					      && a.pos[0] > left2 && a.pos[0] < right2
+						  && a.pos[1] > top2 && a.pos[1] < bottom2)
+					)
+					AddTriangle( a, c, b );
+
+//				D3DXVec3Dot( &vNormal, &vLight ) < 0.0f )
+/*				D3DXVECTOR3 AvgNrm = GetAvgNormal( a, b, c ), CalcNrm = CalculateTriangleNormal( a, b, c );
+				D3DXVECTOR3 Diff = AvgNrm + CalcNrm;
+				float AvgLen = D3DXVec3Length( &AvgNrm );
+				float DeltaLen = D3DXVec3Length( &Diff );
+				if( AvgLen > DeltaLen )
+					AddTriangle( a, c, b );
+				else
+					AddTriangle( a, b, c );* /
+			}* /
+		} loadmesh;
+
+
+		loadmesh.ParseMesh( mMember );
+		loadmesh.CommitMesh();
+		//loadmesh.ValidMesh(L"D:\\mesh.log");
+		loadmesh.CleanMesh();
+		loadmesh.SaveMesh( L"D:\\ornmnt.mesh" );
+
+
+		//loadmesh.AddFrame();
+		//loadmesh.CalculateCanonicalMesh();
+		/*for( int i = loadmesh.GetTrianglesCount() - 1; i >= 0; i -- )
+		if( loadmesh.GetAvgNormal( i )[2] <= 0.02f )
+		loadmesh.RemoveTriangle( i );* /
+		//loadmesh.RemoveUnused();
+		//mMember->Release();
+		
+		
+		//mMember = loadmesh.GetMesh( false );
+	}*/
+	
+	
+//--------------------------------------------------------------------------------------
+	#ifdef DEBUG
+		char * ErrRes = NULL;
+		if( NULL != ErrMsg )
+		{
+			ErrRes = (char *) ErrMsg->GetBufferPointer();
+			MessageBoxA( 0, ErrRes, "Vertex Shader Error", 0);
+			ErrMsg.Release();
+		}
+#endif	
+
+
+//--------------------------------------------------------------------------------------
+	/*if( pFileHolder.GetPureName().Compare( L"ornmnt" ) == 0 )
+	{
+		class CBuildClockOrnament : public CMeshBuilderPlain
+		{
+		} loadmesh;
+
+
+		loadmesh.CloneFromMesh( mMember );
+		loadmesh.CommitMesh();
+		loadmesh.WeldMesh( 0.00000001f, 0.00005f );
+		loadmesh.NormalizeMesh();
+		loadmesh.SimplifyMesh( loadmesh.mVertices.GetSize() >> 4 );
+		loadmesh.SaveMesh( L"D:\\ornmnt.mesh" );
+
+
+	}*/
+
+
+//--------------------------------------------------------------------------------------
+#pragma once
+#ifndef _SKILL_H_
+#define _SKILL_H_
+
+#include "Patterns.h"
+
+enum SKILL
+{
+	SKILL_DUMMY_VALUE = 0,
+	SKILL_RENDERING = 1,
+	SKILL_THREADING = 2,
+	SKILL_TIMER = 3,
+	SKILL_NAME = 4,
+	SKILL_ID = 5
+};
+
+class CSkillsBag abstract
+{
+public:
+	void AddSkill( const LONG_PTR pSkill ) throw(...);
+	bool LookUpForSkill( const LONG_PTR pSkill ) const throw();
+
+protected:
+	CLONG_PTRArray m_Skills;
+};
+#endif
+
+
+#include "DXUT.h"
+#include "Skill.h"
+
+void CSkillsBag::AddSkill( const LONG_PTR pSkill ) throw(...)
+{
+	m_Skills.push_back( pSkill );
+}
+bool CSkillsBag::LookUpForSkill( const LONG_PTR pSkill ) const throw()
+{
+	return -1 < m_Skills.Find( pSkill );
+}
+
+
+//--------------------------------------------------------------------------------------
+#pragma once
+#ifndef _MONAD_DB_TOOLS_H_
+#define _MONAD_DB_TOOLS_H_
+
+#include "CProto.h"
+#include "MonadThreading.h"
+
+class CSequence : public CDestructable
+{
+	CSequence( const LONG_PTR pStartValue = 0 ) throw();
+	LONG_PTR NextVal() throw();
+	LONG_PTR CurrVal() const throw();
+
+protected:
+	volatile LONG_PTR mSeqValue;
+	CMutex mOnAlter;
+};
+
+#endif
+
+
+//--------------------------------------------------------------------------------------
+#include "DXUT.h"
+#include "MonadDBTools.h"
+
+CSequence::CSequence( const LONG_PTR pStartValue ) throw()
+{
+	mOnAlter.Enter();
+	mSeqValue = pStartValue;
+	mOnAlter.Leave();
+}
+LONG_PTR CSequence::NextVal() throw()
+{
+	mOnAlter.Enter();
+	mSeqValue;
+	mOnAlter.Leave();
+	
+	return CurrVal();
+}
+LONG_PTR CSequence::CurrVal() const throw()
+{
+	return mSeqValue;
+}
+
+
+//--------------------------------------------------------------------------------------
+/*namespace MonadConfDict
+{
+	namespace Str
+	{
+		// Application
+		extern std::wstring AppShortName; // Application code name Edu, etc.
+		extern std::wstring AppTitle; // Application's title string
+		extern std::wstring ModuleVersion; // Main module version of running program
+		// Paths
+		extern std::wstring ModulePath; // Full canonical path to the executable
+		extern std::wstring AutoResPath; // Prefetched resources folder
+		extern std::wstring StaticResPath; // Static (on-demand) resource folder, streaming, etc.
+	}
+	namespace Int
+	{
+		extern std::wstring ProcesCores; // Number of process cores
+		extern std::wstring SystemCores; // Number of system cores
+	}
+}*/
+/*namespace MonadConfDict
+{
+namespace Str
+{
+std::wstring AppShortName( L"app" );
+std::wstring AppTitle( L"title" );
+std::wstring ModulePath( L"module" );
+std::wstring ModuleVersion( L"ver" );
+std::wstring AutoResPath( L"auto_res" );
+std::wstring StaticResPath( L"stat_res" );
+}
+namespace Int
+{
+std::wstring ProcesCores( L"proc_core" );
+std::wstring SystemCores( L"sys_core" );
+}
+}*/
+
+/*float4 ps_main_specular_tex(
+	VS_OUTPUT_SPEC_TEX IN,
+    const float2 vPos : VPOS 
+    ) : COLOR 
+*/
+
+
+//--------------------------------------------------------------------------------------
+	/*VOID CRunnableWithMessaging::NotifyMainThread( VOID ) throw()
+	{
+	PostMonadMessage( this, NULL );
+	}*/
+
+
+	/*MONADTHREAD_API VOID PostMonadMessage( IMsg * pMsg, LPARAM lParam ) throw()
+	{
+	if( !PostMessage( gDestWnd, WM_MONAD_PROC, WPARAM (pMsg), lParam ) )
+	ExitProcess( EXIT_FAILURE );
+	}
+
+	MONADTHREAD_API BOOL OnMessage( WPARAM wParam, LPARAM lParam ) throw (...)
+	{
+	return ( ( IMsg * ) wParam )->ProcessMessage( lParam );
+	}*/
+
+//--------------------------------------------------------------------------------------
+/*
+#ifdef DEBUG
+CHookMeshCreator::CHookMeshCreator()
+{
+VERTEXPLAIN t1, t2, t3, t4;
+
+t1.Normal = t2.Normal = t3.Normal = t4.Normal = D3DXVECTOR3( 1.0f, 0.0f, 0.0f );
+t1.Position.z = t2.Position.z = t3.Position.z = t4.Position.z = 0.0f;
+
+hak0.AddTriangle( t3, t4, t1, true );
+
+hak0.CalculateCanonicalMesh();
+hak0.CommitMesh();
+hak0.NormalizeMesh();
+hak0.SaveMesh( L"hook-base.x" );
+}
+#endif
+*/
+
+
+//--------------------------------------------------------------------------------------
+
+		/*else
+		{
+			assert( pFileHolder.GetExtension() == szExtVolTex );
+			LPDIRECT3DVOLUMETEXTURE9 pNewTex( NULL );			
+			assert( NULL != DXUTGetD3D9Device() );
+			assert( 0 < pFileHolder.GetSize() );
+			THROW_EXC_D3D(
+				D3DXCreateVolumeTextureFromFileInMemoryEx(
+				DXUTGetD3D9Device(), 
+				pFileHolder.GetBuffer(),
+				(UINT) pFileHolder.GetSize(),
+				D3DX_DEFAULT, D3DX_DEFAULT, D3DX_DEFAULT,
+				1, 0, D3DFMT_UNKNOWN, D3DPOOL_MANAGED,
+				D3DX_DEFAULT, D3DX_DEFAULT, 0,
+				NULL, NULL, &pNewTex ), 
+				L"D3DXCreateVolumeTextureFromFileEx" );
+			mMember.resetRelease( pNewTex );
+		}*/
+
+
+2009-08-04 nie zniknely buttony na okregu podcza Esc + Exit
+
+2009-08-03 Nach¹dz¹ce siê przyciski
+
+2009-08-02 Czy czarny prostok¹t pierwszoplanowy nie bêdzie najlepsz¹ blokad¹?
+
+2009-07-02 Bezpieczne odœwie¿anie GUI, jak to zrobic? Mo¿e nie warto
+
+//
+// Class CMonadResourceManager
+//
+/*
+void CMonadResourceManager::OnFrameRender()
+{
+	for( int DialogID = 0; CDXUTDialogResourceManager::m_Dialogs.GetSize() > DialogID; DialogID ++ )
+	{
+		// Don't use directly
+		CDXUTExtWindow * pDialog = (CDXUTExtWindow * ) CDXUTExtWindowResourceManager::m_Dialogs.GetAt( DialogID );
+		pDialog->OnRender( MonadTime::fElapsedTime );
+	}
+}
+bool CMonadResourceManager::IsAnyDialogVisible()
+{
+	for( int DialogID = 0; CDXUTDialogResourceManager::m_Dialogs.GetSize() > DialogID; DialogID ++ )
+	{
+		// Don't use directly
+		CDXUTExtWindow * pDialog = (CDXUTExtWindow * ) CDXUTExtWindowResourceManager::m_Dialogs.GetAt( DialogID );
+		if( pDialog->GetVisible() )
+			if( DIALOG_WINDOW == pDialog->GetWindowClass() )
+				return true;
+	}
+
+	return false;
+}
+
+void CMonadResourceManager::OnResetDevice()
+{
+	// Don't use directly
+	DXUTTRACE( L"Reset Manager\n" );
+	THROW_EXC_D3D( CDXUTExtWindowResourceManager::OnD3D9ResetDevice( DXUTGetD3D9Device(), DXUTGetD3D9BackBufferSurfaceDesc() ), L"OnResetManager" );
+}
+
+void CMonadResourceManager::OnLostDevice( )
+{
+	// Don't use directly
+	DXUTTRACE( L"Lost Manager\n" );
+	CDXUTExtWindowResourceManager::OnD3D9LostDevice();
+}
+
+void CMonadResourceManager::OnDestroyDevice( )
+{
+	if( DXUT_D3D9_DEVICE == DeviceLevel )
+		CDXUTExtWindowResourceManager::OnD3D9DestroyDevice();
+	else
+		CDXUTExtWindowResourceManager::OnD3D11DestroyDevice();
+}
+
+LPDIRECT3DTEXTURE9 CMonadResourceManager::GetTexturePtr( int iTexture )
+{
+	return ( static_cast<CDXUTExtWindowResourceManager *> ( this ) )->GetTextureNode( iTexture )->pTexture9;
+}
+ID3D11ShaderResourceView** CMonadResourceManager::GetResourceViewPtr( int iTexture )
+{
+	return &( static_cast<CDXUTExtWindowResourceManager *> ( this ) )->GetTextureNode( iTexture )->pTexResView11;
+}
+*/
+
+
+
+#pragma once
+#ifndef _MONAD_STREAMING_H_
+#define _MONAD_STREAMING_H_
+
+#include "MonadAudio.h"
+#include "MonadException.h"
+#include "FileManager.h"
+#include "Patterns.h"
+
+struct CCue
+{
+	CCue() : m_fBPM( 0.0f ), m_fBar( 0.0f ), m_fPhrase( 0.0f ) {}
+	CCue( float pBPM, float pBar, float pPhrase )
+		: m_fBPM( pBPM ), m_fBar( pBar ), m_fPhrase( pPhrase )
+	{
+	}
+	volatile const float m_fBPM;
+	volatile const float m_fBar;
+	volatile const float m_fPhrase;
+};
+
+struct CWaveStreaming sealed : public MonadAudio::CWaveCallback
+{
+	CWaveStreaming();
+	~CWaveStreaming();
+
+	// Processing function
+	virtual void BeforeWave( const std::wstring & pFilename );
+	virtual void AfterWave( const std::wstring & pFilename );
+
+	static void AddStream( const std::wstring & pFilename );
+	static void PostStream( const std::wstring & pFilename );
+
+private:
+	typedef std::multiset<const std::wstring> CCollectedVoices;
+	static CCollectedVoices & GetCollectedVoices()
+	{
+		static CCollectedVoices mCollectedVoices;
+
+		return mCollectedVoices;
+	}
+	static CCollectedVoices & GetPendingRemoval()
+	{
+		static CCollectedVoices mCollectedVoices;
+
+		return mCollectedVoices;
+	}
+	static MonadThread::CMutex & GetPost()
+	{
+		static MonadThread::CMutex mPost;
+
+		return mPost;
+	}
+	void StartOneStream();
+
+	static CRandomString & GetVoiceName()
+	{
+		static CRandomString s_Streams;
+
+		return s_Streams;
+	}	
+
+	class CStreamLoader : public CFileHolder
+	{
+	public:
+		CStreamLoader( const std::wstring & pFolder, const std::wstring & pFilename );
+		virtual void NotifyMainThread() { delete this; }; // Change default behaviour
+	};
+};
+
+#endif
+
+
+
+
+#include "DXUT.h"
+#include "MonadStreaming.h"
+#include "Singleton.h"
+#include "OldPolishClock.h"
+#include "FileManager.h"
+#include "Path.h"
+#include "MonadThread.h"
+#include "MonadTiming.h"
+#include "MonadCatch.h"
+
+CWaveStreaming::~CWaveStreaming()
+{
+	MonadAudio::ResetQueue();
+}
+CWaveStreaming::CWaveStreaming()
+{
+	StartOneStream();
+}
+void CWaveStreaming::BeforeWave( const std::wstring & pFilename )
+{
+	StartOneStream();
+	const CCue CueParams( Singleton->MonadFactory.GetCue( pFilename ) );
+	CAnimateChange::GetAnimateChange().Alter( CueParams.m_fBar * CueParams.m_fPhrase * 60.0f / CueParams.m_fBPM );
+
+	BOOST_FOREACH( const std::wstring & mFilename, GetPendingRemoval() )
+	{
+		CCollectedVoices::const_iterator it = GetCollectedVoices().find( mFilename );
+		CCollectedVoices::const_iterator nxt( it );
+		if( ++nxt == GetCollectedVoices().end() )
+			MonadAudio::DropVoice( mFilename );
+		GetCollectedVoices().erase( it );
+	}
+	GetPendingRemoval().clear();
+}
+void CWaveStreaming::AfterWave( const std::wstring & pFilename )
+{
+	MonadThread::CLock LockPost( GetPost() );
+	GetPendingRemoval().insert( pFilename );
+}
+void CWaveStreaming::AddStream( const std::wstring & pFilename )
+{
+	GetVoiceName().AddString( pFilename );
+}
+void CWaveStreaming::StartOneStream()
+{
+	const std::wstring mNewVoice( GetVoiceName() );
+	MonadThread::CLock LockPost( GetPost() );
+	const bool IsEmpty( GetCollectedVoices().end() == GetCollectedVoices().find( mNewVoice ) );
+	if( IsEmpty )
+	{
+		
+		CStreamLoader * pLoader = new CStreamLoader( GetRootPath() + L"Res\\Stream\\", mNewVoice );
+		MonadThread::InsertTask( pLoader );
+	}
+	else
+		MonadAudio::EnqueueVoice( mNewVoice, 0, this );
+	GetCollectedVoices().insert( mNewVoice );
+}
+void CWaveStreaming::PostStream( const std::wstring & pFilename )
+{
+	MonadAudio::EnqueueVoice( pFilename, 0, Streaming );
+}
+
+CWaveStreaming::CStreamLoader::CStreamLoader( const std::wstring & pFolder, const std::wstring & pFilename )
+: CFileHolder( pFolder, pFilename + szExtStrm )
+{
+}
+
+
+
+/*bool CMonadWindowsVersion::IsSSE() const throw()
+{
+static const bool bSSE( TRUE == IsProcessorFeaturePresent( PF_XMMI_INSTRUCTIONS_AVAILABLE ) );
+return bSSE;
+}*/

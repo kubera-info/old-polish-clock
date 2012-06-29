@@ -1,0 +1,738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Textures">
+      <UniqueIdentifier>{5d27a01d-ec30-422e-ac7b-ed865eae9e8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VBScript">
+      <UniqueIdentifier>{b7464e44-d693-4074-bf90-7b6b64095b4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Meshes">
+      <UniqueIdentifier>{f1d121df-0891-4bb2-8b2b-87ee153c3eeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fx">
+      <UniqueIdentifier>{c9a4008c-e49e-419e-9f5c-49c5c509df76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fx\D3D9c">
+      <UniqueIdentifier>{c3222cc8-f744-4c95-b11d-ec9d35961ce0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fx\D3D11">
+      <UniqueIdentifier>{393dd2fc-7c2f-4139-90e2-b6656d99f2c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Waves">
+      <UniqueIdentifier>{c0919233-c07d-4605-81e3-8da010f9707d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Waves\Time PL">
+      <UniqueIdentifier>{4668b2f7-487e-4cfb-b9da-c17abd7d2b1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Waves\Time En">
+      <UniqueIdentifier>{30035c70-ce18-4b38-a8a4-a60db2e799cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Waves\Stream">
+      <UniqueIdentifier>{1ae96043-c3fa-4c1b-8b57-7da2a77b7839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Waves\Time Ru">
+      <UniqueIdentifier>{dc64e18b-5a08-4def-907c-88e90901e728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Consts">
+      <UniqueIdentifier>{3472c8d3-0267-467f-b97c-5fb68371a9f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CmdStripts">
+      <UniqueIdentifier>{d4047275-7ff3-4c92-aee4-5cc2bbbad753}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bin">
+      <UniqueIdentifier>{6285b50f-c939-4b19-ac10-d49c75142ca3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <TexConv Include="Textures\adam.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\adam2.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\brick.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\clockface01.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\clockface02.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\clockface03.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\clockface04.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\flag_pl.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\flag_ru.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\flag_uk.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\girl.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\jesus.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\landscape.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\metal.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\miss.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\napoleon.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+    <TexConv Include="Textures\ostap.png">
+      <Filter>Textures</Filter>
+    </TexConv>
+  </ItemGroup>
+  <ItemGroup>
+    <TexConv_2 Include="Textures\wood.jpg">
+      <Filter>Textures</Filter>
+    </TexConv_2>
+  </ItemGroup>
+  <ItemGroup>
+    <Vbs2Vbe Include="VBScript\MonadScriptDelParent.vbs">
+      <Filter>VBScript</Filter>
+    </Vbs2Vbe>
+    <Vbs2Vbe Include="VBScript\MonadScriptRunOnceCleaner.vbs">
+      <Filter>VBScript</Filter>
+    </Vbs2Vbe>
+  </ItemGroup>
+  <ItemGroup>
+    <Mesh Include="Meshes\adam.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\adam_border.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\adam_metallic.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\back.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\back_hook.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\box.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\brick.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\button.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\casing.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\clockface.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\folder.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\front.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\front2.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\glass.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\glass2.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\hinge.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\hook.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\hour.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\jesus.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\jesus_border.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\jesus_metallic.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\landscape.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\landscape_border.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\landscape_metallic.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\metal.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\middle_hook.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\min.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\miss.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\mount.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\nails.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\napoleon.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\napoleon_border.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\napoleon_metallic.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\ornmnt.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\ostap.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\ostap_border.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\ostap_metallic.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\oval.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\pendulum.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\side.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\side_nails.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\square.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\string.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\string_int.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\top.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\torus.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\weight.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+    <Mesh Include="Meshes\wooden_nails.x">
+      <Filter>Meshes</Filter>
+    </Mesh>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CmdScripts\chlsl.cmd">
+      <Filter>CmdStripts</Filter>
+    </None>
+    <None Include="CmdScripts\copy.cmd">
+      <Filter>CmdStripts</Filter>
+    </None>
+    <None Include="CmdScripts\dds.cmd">
+      <Filter>CmdStripts</Filter>
+    </None>
+    <None Include="CmdScripts\fx.cmd">
+      <Filter>CmdStripts</Filter>
+    </None>
+    <None Include="CmdScripts\hlsl.cmd">
+      <Filter>CmdStripts</Filter>
+    </None>
+    <None Include="CmdScripts\mesh.cmd">
+      <Filter>CmdStripts</Filter>
+    </None>
+    <None Include="CmdScripts\tex.cmd">
+      <Filter>CmdStripts</Filter>
+    </None>
+    <None Include="CmdScripts\vbe.cmd">
+      <Filter>CmdStripts</Filter>
+    </None>
+    <None Include="CmdScripts\wav.cmd">
+      <Filter>CmdStripts</Filter>
+    </None>
+    <None Include="Encrypt.exe">
+      <Filter>Bin</Filter>
+    </None>
+    <None Include="MonadRule.rules" />
+  </ItemGroup>
+  <ItemGroup>
+    <FXC_SM2 Include="Fx\light.fx">
+      <Filter>Fx\D3D9c</Filter>
+    </FXC_SM2>
+    <FXC_SM2 Include="Fx\shadow.fx">
+      <Filter>Fx\D3D9c</Filter>
+    </FXC_SM2>
+  </ItemGroup>
+  <ItemGroup>
+    <FXC_SM4 Include="Fx\ps.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_ambient_glass.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_specular_glass.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_specular_hand.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_specular_tex.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_specular_tex_2.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_specular_wood.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_tex.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_tex_wood.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_tex.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\shadow_ps.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\shadow_tex_vs.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\shadow_vs.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\vs.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\vs_ambient_glass.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\vs_main.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\vs_main_brick_tex.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\vs_main_specular_glass.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\vs_main_specular_hand.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\vs_main_specular_tex.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\vs_main_specular_wood.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\vs_main_tex.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\vs_tex.bat">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\input.fxh">
+      <Filter>Fx\D3D9c</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\light.fxh">
+      <Filter>Fx\D3D9c</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\struct.fxh">
+      <Filter>Fx\D3D9c</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\light.hlsl">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\shadow.hlsl">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\struct-11.fxh">
+      <Filter>Fx\D3D11</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Bin\bzip2.dll">
+      <Filter>Bin</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Bin\bzip2.exe">
+      <Filter>Bin</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Bin\Default.SFX">
+      <Filter>Bin</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Bin\screnc.chm">
+      <Filter>Bin</Filter>
+    </FXC_SM4>
+    <FXC_SM4 Include="Bin\screnc.exe">
+      <Filter>Bin</Filter>
+    </FXC_SM4>
+  </ItemGroup>
+  <ItemGroup>
+    <wav Include="Waves\focus.wav">
+      <Filter>Waves</Filter>
+    </wav>
+    <wav Include="Waves\gong.wav">
+      <Filter>Waves</Filter>
+    </wav>
+    <wav Include="Waves\no.wav">
+      <Filter>Waves</Filter>
+    </wav>
+    <wav Include="Waves\tic.wav">
+      <Filter>Waves</Filter>
+    </wav>
+    <wav Include="Waves\vopros.wav">
+      <Filter>Waves</Filter>
+    </wav>
+    <wav Include="Waves\yes.wav">
+      <Filter>Waves</Filter>
+    </wav>
+    <wav Include="Waves\czternasta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\czwarta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\druga.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\dwudziesta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\dwunasta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\dziesiata.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\dziewiata.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\dziewietnasta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\godzina.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\jedenasta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\jest.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\minut_po_polnocy.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\minut_po_poludniu.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\osiemnasta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\osma.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\piata.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\pierwsza.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\pietnasta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\polnoc.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\rano.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\siedemnasta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\siodma.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\szesnasta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\szosta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\trzecia.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\trzydziesci.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\trzynasta.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\w_nocy.wav">
+      <Filter>Waves\Time PL</Filter>
+    </wav>
+    <wav Include="Waves\0.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\1.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\10.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\11.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\12.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\2.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\3.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\4.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\5.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\6.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\7.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\8.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\9.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\am.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\half_past.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\it_is.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\o_clock.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\pm.wav">
+      <Filter>Waves\Time En</Filter>
+    </wav>
+    <wav Include="Waves\day.wav">
+      <Filter>Waves\Stream</Filter>
+    </wav>
+    <wav Include="Waves\easy.wav">
+      <Filter>Waves\Stream</Filter>
+    </wav>
+    <wav Include="Waves\evening.wav">
+      <Filter>Waves\Stream</Filter>
+    </wav>
+    <wav Include="Waves\flying_circus.wav">
+      <Filter>Waves\Stream</Filter>
+    </wav>
+    <wav Include="Waves\morning.wav">
+      <Filter>Waves\Stream</Filter>
+    </wav>
+    <wav Include="Waves\never_down.wav">
+      <Filter>Waves\Stream</Filter>
+    </wav>
+    <wav Include="Waves\purumba.wav">
+      <Filter>Waves\Stream</Filter>
+    </wav>
+    <wav Include="Waves\0-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\0_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\1-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\10-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\10_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\11-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\11_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\12-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\12_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\13-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\13_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\14-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\14_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\15-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\15_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\16-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\16_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\17-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\17_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\18-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\18_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\19-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\19_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\1_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\2-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\20-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\20_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\21-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\21_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\22-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\22_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\23-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\23_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\2_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\3-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\3_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\4-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\4_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\5-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\5_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\6-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\6_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\7-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\7_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\8-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\8_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\9-30_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+    <wav Include="Waves\9_ru.wav">
+      <Filter>Waves\Time Ru</Filter>
+    </wav>
+  </ItemGroup>
+  <ItemGroup>
+    <XML Include="Consts\dx11.xml">
+      <Filter>Consts</Filter>
+    </XML>
+    <XML Include="Consts\voice.xml">
+      <Filter>Consts</Filter>
+    </XML>
+  </ItemGroup>
+</Project>

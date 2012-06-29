@@ -1,1 +1,0 @@
-#include "tarcza.h"

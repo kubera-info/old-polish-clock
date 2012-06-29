@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5C018F3C-A16C-4E4A-96E1-7DC777B9F190}</ProjectGuid>
+    <RootNamespace>OldPolishClockResources</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="MonadRule.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <ExtensionsToDeleteOnClean Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">*.*-setup</ExtensionsToDeleteOnClean>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <TexConv Include="Textures\adam.png">
+      <TextureFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</TextureFormat>
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">6</OnDemand>
+    </TexConv>
+    <TexConv Include="Textures\adam2.png">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">6</OnDemand>
+    </TexConv>
+    <TexConv Include="Textures\brick.png" />
+    <TexConv Include="Textures\clockface01.png">
+      <TextureFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</TextureFormat>
+    </TexConv>
+    <TexConv Include="Textures\clockface02.png">
+      <TextureFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</TextureFormat>
+    </TexConv>
+    <TexConv Include="Textures\clockface03.png">
+      <TextureFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</TextureFormat>
+    </TexConv>
+    <TexConv Include="Textures\clockface04.png">
+      <TextureFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</TextureFormat>
+    </TexConv>
+    <TexConv Include="Textures\flag_pl.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </TexConv>
+    <TexConv Include="Textures\flag_ru.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </TexConv>
+    <TexConv Include="Textures\flag_uk.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </TexConv>
+    <TexConv Include="Textures\girl.png">
+      <TextureFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</TextureFormat>
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2</OnDemand>
+    </TexConv>
+    <TexConv Include="Textures\jesus.png">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</OnDemand>
+    </TexConv>
+    <TexConv Include="Textures\landscape.png">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4</OnDemand>
+    </TexConv>
+    <TexConv Include="Textures\metal.png" />
+    <TexConv Include="Textures\miss.png">
+      <TextureFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</TextureFormat>
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</OnDemand>
+    </TexConv>
+    <TexConv Include="Textures\napoleon.png">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5</OnDemand>
+    </TexConv>
+    <TexConv Include="Textures\ostap.png">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">3</OnDemand>
+    </TexConv>
+  </ItemGroup>
+  <ItemGroup>
+    <TexConv_2 Include="Textures\wood.jpg">
+      <TextureFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</TextureFormat>
+    </TexConv_2>
+  </ItemGroup>
+  <ItemGroup>
+    <Vbs2Vbe Include="VBScript\MonadScriptDelParent.vbs" />
+    <Vbs2Vbe Include="VBScript\MonadScriptRunOnceCleaner.vbs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Mesh Include="Meshes\adam.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">6</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\adam_border.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">6</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\adam_metallic.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">6</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\back.x" />
+    <Mesh Include="Meshes\back_hook.x" />
+    <Mesh Include="Meshes\box.x" />
+    <Mesh Include="Meshes\brick.x" />
+    <Mesh Include="Meshes\button.x">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Mesh>
+    <Mesh Include="Meshes\casing.x" />
+    <Mesh Include="Meshes\clockface.x" />
+    <Mesh Include="Meshes\folder.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\front.x" />
+    <Mesh Include="Meshes\front2.x" />
+    <Mesh Include="Meshes\glass.x" />
+    <Mesh Include="Meshes\glass2.x" />
+    <Mesh Include="Meshes\hinge.x" />
+    <Mesh Include="Meshes\hook.x" />
+    <Mesh Include="Meshes\hour.x" />
+    <Mesh Include="Meshes\jesus.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\jesus_border.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\jesus_metallic.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\landscape.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\landscape_border.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\landscape_metallic.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\metal.x" />
+    <Mesh Include="Meshes\middle_hook.x" />
+    <Mesh Include="Meshes\min.x" />
+    <Mesh Include="Meshes\miss.x" />
+    <Mesh Include="Meshes\mount.x" />
+    <Mesh Include="Meshes\nails.x" />
+    <Mesh Include="Meshes\napoleon.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\napoleon_border.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\napoleon_metallic.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\ornmnt.x" />
+    <Mesh Include="Meshes\ostap.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">3</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\ostap_border.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">3</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\ostap_metallic.x">
+      <OnDemand Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">3</OnDemand>
+    </Mesh>
+    <Mesh Include="Meshes\oval.x" />
+    <Mesh Include="Meshes\pendulum.x" />
+    <Mesh Include="Meshes\side.x" />
+    <Mesh Include="Meshes\side_nails.x" />
+    <Mesh Include="Meshes\square.x" />
+    <Mesh Include="Meshes\string.x" />
+    <Mesh Include="Meshes\string_int.x" />
+    <Mesh Include="Meshes\top.x" />
+    <Mesh Include="Meshes\torus.x" />
+    <Mesh Include="Meshes\weight.x" />
+    <Mesh Include="Meshes\wooden_nails.x" />
+  </ItemGroup>
+  <ItemGroup>
+    <FXC_SM4 Include="Fx\input.fxh">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\light.fxh">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\struct.fxh">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\light.hlsl">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\shadow.hlsl">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\struct-11.fxh">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <None Include="CmdScripts\chlsl.cmd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CmdScripts\copy.cmd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CmdScripts\dds.cmd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CmdScripts\fx.cmd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CmdScripts\hlsl.cmd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CmdScripts\mesh.cmd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CmdScripts\tex.cmd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CmdScripts\vbe.cmd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CmdScripts\wav.cmd">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <FXC_SM4 Include="Bin\bzip2.dll">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <FXC_SM4 Include="Bin\bzip2.exe">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <FXC_SM4 Include="Bin\Default.SFX">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <None Include="Encrypt.exe">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <FXC_SM4 Include="Bin\screnc.chm">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <FXC_SM4 Include="Bin\screnc.exe">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FXC_SM4>
+    <None Include="MonadRule.rules">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FXC_SM2 Include="Fx\light.fx" />
+    <FXC_SM2 Include="Fx\shadow.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <FXC_SM4 Include="Fx\ps.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_ambient_glass.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_specular_glass.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_specular_hand.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_specular_tex.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_specular_tex_2.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_specular_wood.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_tex.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_main_tex_wood.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\ps_tex.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\shadow_ps.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\shadow_tex_vs.bat">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</ShaderType>
+    </FXC_SM4>
+    <FXC_SM4 Include="Fx\shadow_vs.bat" />
+    <FXC_SM4 Include="Fx\vs.bat" />
+    <FXC_SM4 Include="Fx\vs_ambient_glass.bat" />
+    <FXC_SM4 Include="Fx\vs_main.bat" />
+    <FXC_SM4 Include="Fx\vs_main_brick_tex.bat" />
+    <FXC_SM4 Include="Fx\vs_main_specular_glass.bat" />
+    <FXC_SM4 Include="Fx\vs_main_specular_hand.bat" />
+    <FXC_SM4 Include="Fx\vs_main_specular_tex.bat" />
+    <FXC_SM4 Include="Fx\vs_main_specular_wood.bat" />
+    <FXC_SM4 Include="Fx\vs_main_tex.bat" />
+    <FXC_SM4 Include="Fx\vs_tex.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <wav Include="Waves\focus.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2</AudioDest>
+    </wav>
+    <wav Include="Waves\gong.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</AudioDest>
+    </wav>
+    <wav Include="Waves\no.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2</AudioDest>
+    </wav>
+    <wav Include="Waves\tic.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</AudioDest>
+    </wav>
+    <wav Include="Waves\vopros.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2</AudioDest>
+    </wav>
+    <wav Include="Waves\yes.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2</AudioDest>
+    </wav>
+    <wav Include="Waves\czternasta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\czwarta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\druga.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\dwudziesta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\dwunasta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\dziesiata.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\dziewiata.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\dziewietnasta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\godzina.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\jedenasta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\jest.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\minut_po_polnocy.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\minut_po_poludniu.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\osiemnasta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\osma.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\piata.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\pierwsza.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\pietnasta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\polnoc.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\rano.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+      <AudioExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</AudioExt>
+    </wav>
+    <wav Include="Waves\siedemnasta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\siodma.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\szesnasta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\szosta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\trzecia.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\trzydziesci.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\trzynasta.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\w_nocy.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\0.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+      <AudioExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</AudioExt>
+    </wav>
+    <wav Include="Waves\1.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+      <AudioExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0</AudioExt>
+    </wav>
+    <wav Include="Waves\10.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\11.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\12.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\2.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\3.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\4.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\5.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\6.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\7.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\8.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\9.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\am.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\half_past.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\it_is.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\o_clock.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\pm.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\day.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+      <AudioExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioExt>
+    </wav>
+    <wav Include="Waves\easy.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+      <AudioExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioExt>
+    </wav>
+    <wav Include="Waves\evening.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+      <AudioExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioExt>
+    </wav>
+    <wav Include="Waves\flying_circus.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+      <AudioExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioExt>
+    </wav>
+    <wav Include="Waves\morning.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+      <AudioExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioExt>
+    </wav>
+    <wav Include="Waves\never_down.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+      <AudioExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioExt>
+    </wav>
+    <wav Include="Waves\purumba.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+      <AudioExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioExt>
+    </wav>
+    <wav Include="Waves\0-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\0_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\1-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\10-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\10_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\11-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\11_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\12-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\12_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\13-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\13_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\14-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\14_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\15-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\15_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\16-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\16_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\17-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\17_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\18-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\18_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\19-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\19_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\1_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\2-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\20-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\20_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\21-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\21_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\22-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\22_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\23-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\23_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\2_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\3-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\3_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\4-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\4_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\5-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\5_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\6-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\6_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\7-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\7_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\8-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\8_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\9-30_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+    <wav Include="Waves\9_ru.wav">
+      <AudioFormat Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioFormat>
+      <AudioDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</AudioDest>
+    </wav>
+  </ItemGroup>
+  <ItemGroup>
+    <XML Include="Consts\dx11.xml">
+      <ConstsDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</ConstsDest>
+    </XML>
+    <XML Include="Consts\voice.xml">
+      <ConstsDest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">2</ConstsDest>
+    </XML>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="MonadRule.targets" />
+  </ImportGroup>
+</Project>

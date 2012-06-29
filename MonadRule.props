@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup
+    Condition="'$(FXC_SM2BeforeTargets)' == '' and '$(FXC_SM2AfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <FXC_SM2BeforeTargets>Midl</FXC_SM2BeforeTargets>
+    <FXC_SM2AfterTargets>CustomBuild</FXC_SM2AfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FXC_SM2DependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(FXC_SM2DependsOn)</FXC_SM2DependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <FXC_SM2>
+      <CommandLineTemplate>$(SolutionDir)CmdScripts\fx.cmd"           "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\fxc.exe"           "%(RootDir)%(Directory)..\Res\DX9\%(Filename).fxo"           "%(RootDir)%(Directory)%(Filename).fx"           "$(ProjectDir)Encrypt.exe"           "%(RootDir)%(Directory)..\Res\DX9\%(Filename).monad-fx"           "$(SolutionDir)Bin\bzip2.exe</CommandLineTemplate>
+      <Outputs>$(SolutionDir)Res\DX9\%(Filename).monad-fx</Outputs>
+    </FXC_SM2>
+  </ItemDefinitionGroup>
+  <PropertyGroup
+    Condition="'$(FXC_SM4BeforeTargets)' == '' and '$(FXC_SM4AfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <FXC_SM4BeforeTargets>Midl</FXC_SM4BeforeTargets>
+    <FXC_SM4AfterTargets>CustomBuild</FXC_SM4AfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FXC_SM4DependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(FXC_SM4DependsOn)</FXC_SM4DependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <FXC_SM4>
+      <ShaderType>0</ShaderType>
+      <CommandLineTemplate>"$(SolutionDir)CmdScripts\hlsl.cmd"        "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\fxc.exe"       "$(ProjectDir)CmdScripts\chlsl.cmd"       "$(SolutionDir)Encrypt.exe"       "%(FullPath)"       "$(SolutionDir)Tmp\%(Filename).fxo"       "$(SolutionDir)Res\DX11\%(Filename).monad-fx"       "$(SolutionDir)Bin\bzip2.exe"       [ShaderType]</CommandLineTemplate>
+      <Outputs>$(SolutionDir)Res\DX11\%(Filename).monad-fx</Outputs>
+    </FXC_SM4>
+  </ItemDefinitionGroup>
+  <PropertyGroup
+    Condition="'$(TexConvBeforeTargets)' == '' and '$(TexConvAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <TexConvBeforeTargets>Midl</TexConvBeforeTargets>
+    <TexConvAfterTargets>CustomBuild</TexConvAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TexConvDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(TexConvDependsOn)</TexConvDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <TexConv>
+      <TextureFormat>0</TextureFormat>
+      <OnDemand>0</OnDemand>
+      <CommandLineTemplate>"$(SolutionDir)CmdScripts\tex.cmd"           "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\texconv.exe"           "%(FullPath)"           "$(SolutionDir)Res\[OnDemand]"           "$(ProjectDir)Encrypt.exe"           "%(RootDir)%(Directory)..\Res\[OnDemand]\%(Filename).dds"           "$(SolutionDir)Res\[OnDemand]\%(Filename).monad-tex"           "$(SolutionDir)Bin\bzip2.exe"           [TextureFormat]</CommandLineTemplate>
+      <Outputs>$(SolutionDir)Res\[OnDemand]\%(Filename).monad-tex</Outputs>
+    </TexConv>
+  </ItemDefinitionGroup>
+  <PropertyGroup
+    Condition="'$(TexConv_2BeforeTargets)' == '' and '$(TexConv_2AfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <TexConv_2BeforeTargets>Midl</TexConv_2BeforeTargets>
+    <TexConv_2AfterTargets>CustomBuild</TexConv_2AfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TexConv_2DependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(TexConv_2DependsOn)</TexConv_2DependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <TexConv_2>
+      <TextureFormat>0</TextureFormat>
+      <OnDemand>0</OnDemand>
+      <CommandLineTemplate>"$(SolutionDir)CmdScripts\tex.cmd"           "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\texconv.exe"           "%(FullPath)"           "$(SolutionDir)Res\[OnDemand]"           "$(ProjectDir)Encrypt.exe"           "%(RootDir)%(Directory)..\Res\[OnDemand]\%(Filename).dds"           "%(RootDir)%(Directory)..\Res\[OnDemand]\%(Filename).monad-tex"           "$(SolutionDir)Bin\bzip2.exe"           [TextureFormat]</CommandLineTemplate>
+      <Outputs>$(SolutionDir)Res\[OnDemand]\%(Filename).monad-tex</Outputs>
+    </TexConv_2>
+  </ItemDefinitionGroup>
+  <PropertyGroup
+    Condition="'$(DDS_TexBeforeTargets)' == '' and '$(DDS_TexAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <DDS_TexBeforeTargets>Midl</DDS_TexBeforeTargets>
+    <DDS_TexAfterTargets>CustomBuild</DDS_TexAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DDS_TexDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(DDS_TexDependsOn)</DDS_TexDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <DDS_Tex>
+      <CommandLineTemplate>$(SolutionDir)CmdScripts\dds.cmd" "%(FullPath)" "$(ProjectDir)Encrypt.exe" "$(SolutionDir)Res\[OnDemand]\%(Filename).monad-tex" "$(SolutionDir)Bin\bzip2.exe</CommandLineTemplate>
+      <Outputs>$(SolutionDir)Res\[OnDemand]\%(Filename).monad-tex</Outputs>
+    </DDS_Tex>
+  </ItemDefinitionGroup>
+  <PropertyGroup
+    Condition="'$(XMLBeforeTargets)' == '' and '$(XMLAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <XMLBeforeTargets>Midl</XMLBeforeTargets>
+    <XMLAfterTargets>CustomBuild</XMLAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <XMLDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(XMLDependsOn)</XMLDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <XML>
+      <ConstsDest>0</ConstsDest>
+      <CommandLineTemplate>"$(SolutionDir)Encrypt.exe" "%(FullPath)" "$(SolutionDir)Res\[ConstsDest]\%(Filename).monad-db" "$(SolutionDir)Bin\bzip2.exe" nop</CommandLineTemplate>
+      <Outputs>$(SolutionDir)Res\[ConstsDest]\%(Filename).monad-db</Outputs>
+    </XML>
+  </ItemDefinitionGroup>
+  <PropertyGroup
+    Condition="'$(wavBeforeTargets)' == '' and '$(wavAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <wavBeforeTargets>Midl</wavBeforeTargets>
+    <wavAfterTargets>CustomBuild</wavAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <wavDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(wavDependsOn)</wavDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <wav>
+      <AudioFormat>0</AudioFormat>
+      <AudioDest>0</AudioDest>
+      <AudioExt>0</AudioExt>
+      <CommandLineTemplate>"$(SolutionDir)CmdScripts\wav.cmd"       [AudioFormat]       "%(FullPath)"       "$(SolutionDir)Tmp\%(Filename).$$$"       "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\xWMAEncode.exe"       "$(SolutionDir)Encrypt.exe"       "$(SolutionDir)Res\[AudioDest]\%(Filename).[AudioExt]"        "$(SolutionDir)Bin\bzip2.exe"       nop</CommandLineTemplate>
+      <Outputs>$(SolutionDir)Res\[AudioDest]\%(Filename).[AudioExt]</Outputs>
+    </wav>
+  </ItemDefinitionGroup>
+  <PropertyGroup
+    Condition="'$(Vbs2VbeBeforeTargets)' == '' and '$(Vbs2VbeAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <Vbs2VbeBeforeTargets>Midl</Vbs2VbeBeforeTargets>
+    <Vbs2VbeAfterTargets>CustomBuild</Vbs2VbeAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Vbs2VbeDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(Vbs2VbeDependsOn)</Vbs2VbeDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Vbs2Vbe>
+      <CommandLineTemplate>$(SolutionDir)CmdScripts\vbe.cmd" "$(SolutionDir)Bin\screnc.exe" "%(FullPath)" "%(RootDir)%(Directory)%(Filename).vbe</CommandLineTemplate>
+      <Outputs>%(RootDir)%(Directory)%(Filename).vbe</Outputs>
+    </Vbs2Vbe>
+  </ItemDefinitionGroup>
+  <PropertyGroup
+    Condition="'$(MeshBeforeTargets)' == '' and '$(MeshAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <MeshBeforeTargets>Midl</MeshBeforeTargets>
+    <MeshAfterTargets>CustomBuild</MeshAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MeshDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(MeshDependsOn)</MeshDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Mesh>
+      <OnDemand>0</OnDemand>
+      <CommandLineTemplate>$(SolutionDir)CmdScripts\mesh.cmd"           "C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\MeshConvert.exe"           "%(FullPath)"           "$(SolutionDir)Res\[OnDemand]\%(Filename).sdkmesh"           "$(SolutionDir)Encrypt.exe"           "$(SolutionDir)Res\[OnDemand]\%(Filename).sdkmesh"           "$(SolutionDir)Res\[OnDemand]\%(Filename).monad-mesh"           "$(SolutionDir)Bin\bzip2.exe</CommandLineTemplate>
+      <Outputs>$(SolutionDir)Res\[OnDemand]\%(Filename).monad-mesh</Outputs>
+    </Mesh>
+  </ItemDefinitionGroup>
+</Project>

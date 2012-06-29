@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="Filess Merger"
+	Version="8,00"
+	>
+	<Rules>
+    <CustomBuildRule
+			Name="WinRarCreator"
+			DisplayName="WinRar Creator"
+			CommandLine="
+      &quot;$(InputPath)&quot; 
+      &quot;$(SolutionDir)bin\rar.exe&quot; 
+      &quot;$(ProjectDir)Packed\$(InputName).exe&quot;
+      &quot;$(SolutionDir)&quot;"
+			Outputs="$(ProjectDir)Packed\$(InputName).exe"
+			FileExtensions="*.bat"
+			ExecutionDescription="Packaging Files"
+			>
+      <Properties>
+      </Properties>
+    </CustomBuildRule>
+	</Rules>
+</VisualStudioToolFile>

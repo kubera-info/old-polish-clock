@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="Filess Merger"
+	Version="8,00"
+	>
+  <Rules>
+    <CustomBuildRule
+			Name="FXC_SM2"
+			DisplayName="FXC SM2"
+			CommandLine="&quot;$(SolutionDir)CmdScripts\fx.cmd&quot;           &quot;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\fxc.exe&quot;           &quot;$(InputDir)..\Res\DX9\$(InputName).fxo&quot;           &quot;$(InputDir)$(InputName).fx&quot;           &quot;$(ProjectDir)Encrypt.exe&quot;           &quot;$(InputDir)..\Res\DX9\$(InputName).monad-fx&quot;           &quot;$(SolutionDir)Bin\bzip2.exe&quot;"
+			Outputs="$(SolutionDir)Res\DX9\$(InputName).monad-fx"
+			FileExtensions="*.fx"
+			>
+      <Properties>
+      </Properties>
+    </CustomBuildRule>
+    <CustomBuildRule
+			Name="FXC_SM4"
+			DisplayName="FXC SM4"
+			CommandLine="&quot;$(SolutionDir)CmdScripts\hlsl.cmd&quot; 
+      &quot;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\fxc.exe&quot;
+      &quot;$(ProjectDir)CmdScripts\chlsl.cmd&quot;
+      &quot;$(SolutionDir)Encrypt.exe&quot;
+      &quot;$(InputPath)&quot;
+      &quot;$(SolutionDir)Tmp\$(InputName).fxo&quot;
+      &quot;$(SolutionDir)Res\DX11\$(InputName).monad-fx&quot;
+      &quot;$(SolutionDir)Bin\bzip2.exe&quot;
+      [ShaderType]"
+			Outputs="$(SolutionDir)Res\DX11\$(InputName).monad-fx"
+			FileExtensions="*.bat"
+			>
+      <Properties>
+        <EnumProperty
+					Name="ShaderType"
+					DisplayName="Shader Type"
+					Description="Sets desired type of compiled shader"
+					>
+          <Values>
+            <EnumValue
+							Value="0"
+							Switch="vs_4_0_level_9_3"
+							DisplayName="Vertex Shader 4.0"
+						/>
+            <EnumValue
+							Value="1"
+							Switch="ps_4_0_level_9_3"
+							DisplayName="Pixel Shader 4.0"
+						/>
+          </Values>
+        </EnumProperty>
+          <!--<StringProperty
+            Name="OutputFileName"
+            DisplayName="Output File Name"
+            />-->            
+      </Properties>
+    </CustomBuildRule>
+    <CustomBuildRule
+			Name="TexConv"
+			DisplayName="TexConv"
+			CommandLine="&quot;$(SolutionDir)CmdScripts\tex.cmd&quot;           &quot;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\texconv.exe&quot;           &quot;$(InputPath)&quot;           &quot;$(SolutionDir)Res\[OnDemand]&quot;           &quot;$(ProjectDir)Encrypt.exe&quot;           &quot;$(InputDir)..\Res\[OnDemand]\$(InputName).dds&quot;           &quot;$(SolutionDir)Res\[OnDemand]\$(InputName).monad-tex&quot;           &quot;$(SolutionDir)Bin\bzip2.exe&quot;           [TextureFormat]"
+			Outputs="$(SolutionDir)Res\[OnDemand]\$(InputName).monad-tex"
+			FileExtensions="*.png"
+			>
+      <Properties>
+        <EnumProperty
+					Name="TextureFormat"
+					DisplayName="Texture&apos;s Format"
+					Description="Sets desired texture formst"
+					>
+          <Values>
+            <EnumValue
+							Value="0"
+							Switch="DXT1"
+							DisplayName="DXT1 (no alpha channel)"
+						/>
+            <EnumValue
+							Value="1"
+							Switch="DXT5"
+							DisplayName="DXT5 with alpha channel"
+						/>
+            <EnumValue
+							Value="2"
+							Switch="L8"
+							DisplayName="Luminance L8"
+						/>
+          </Values>
+        </EnumProperty>
+        <EnumProperty
+          Name="OnDemand"
+          DisplayName="On-demand Destination"
+          Description="Sets desired destination and usage"
+					>
+          <Values>
+            <EnumValue
+              Value="0"
+              Switch="Auto"
+              DisplayName="Auto"
+						/>
+            <EnumValue
+              Value="1"
+              Switch="Jesus"
+              DisplayName="Jesus"
+						/>
+            <EnumValue
+              Value="2"
+              Switch="Girl"
+              DisplayName="Girl"
+						/>
+            <EnumValue
+              Value="3"
+              Switch="Ostap"
+              DisplayName="Ostap"
+						/>
+            <EnumValue
+              Value="4"
+              Switch="Landscape"
+              DisplayName="Landscape"
+						/>
+            <EnumValue
+              Value="5"
+              Switch="Napoleon"
+              DisplayName="Napoleon"
+						/>
+            <EnumValue
+              Value="6"
+              Switch="Adam"
+              DisplayName="Adam"
+						/>
+          </Values>
+        </EnumProperty>
+      </Properties>
+    </CustomBuildRule>
+    <CustomBuildRule
+			Name="TexConv 2"
+			DisplayName="TexConv 2"
+			CommandLine="&quot;$(SolutionDir)CmdScripts\tex.cmd&quot;           &quot;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\texconv.exe&quot;           &quot;$(InputPath)&quot;           &quot;$(SolutionDir)Res\[OnDemand]&quot;           &quot;$(ProjectDir)Encrypt.exe&quot;           &quot;$(InputDir)..\Res\[OnDemand]\$(InputName).dds&quot;           &quot;$(InputDir)..\Res\[OnDemand]\$(InputName).monad-tex&quot;           &quot;$(SolutionDir)Bin\bzip2.exe&quot;           [TextureFormat]"
+			Outputs="$(SolutionDir)Res\[OnDemand]\$(InputName).monad-tex"
+			FileExtensions="*.jpg"
+			>
+      <Properties>
+        <EnumProperty
+					Name="TextureFormat"
+					DisplayName="Texture&apos;s Format"
+					Description="Sets desired texture formst"
+					>
+          <Values>
+            <EnumValue
+							Value="0"
+							Switch="DXT1"
+							DisplayName="DXT1 (no alpha channel)"
+						/>
+            <EnumValue
+							Value="1"
+							Switch="DXT5"
+							DisplayName="DXT5 with alpha channel"
+						/>
+            <EnumValue
+							Value="2"
+							Switch="L8"
+							DisplayName="Luminance L8"
+						/>
+          </Values>
+        </EnumProperty>
+        <EnumProperty
+          Name="OnDemand"
+          DisplayName="On-demand Destination"
+          Description="Sets desired destination and usage"
+					>
+          <Values>
+            <EnumValue
+              Value="0"
+              Switch="Auto"
+              DisplayName="Auto"
+						/>
+            <EnumValue
+              Value="1"
+              Switch="Jesus"
+              DisplayName="Jesus"
+						/>
+            <EnumValue
+              Value="2"
+              Switch="Girl"
+              DisplayName="Girl"
+						/>
+            <EnumValue
+              Value="3"
+              Switch="Ostap"
+              DisplayName="Ostap"
+						/>
+            <EnumValue
+              Value="4"
+              Switch="Landscape"
+              DisplayName="Landscape"
+						/>
+            <EnumValue
+              Value="5"
+              Switch="Napoleon"
+              DisplayName="Napoleon"
+						/>
+            <EnumValue
+              Value="6"
+              Switch="Adam"
+              DisplayName="Adam"
+						/>
+          </Values>
+        </EnumProperty>
+      </Properties>
+    </CustomBuildRule>
+    <CustomBuildRule
+			Name="DDS Tex"
+			DisplayName="DDS Texture"
+			CommandLine="&quot;$(SolutionDir)CmdScripts\dds.cmd&quot; &quot;$(InputPath)&quot; &quot;$(ProjectDir)Encrypt.exe&quot; &quot;$(SolutionDir)Res\[OnDemand]\$(InputName).monad-tex&quot; &quot;$(SolutionDir)Bin\bzip2.exe&quot;"
+			Outputs="$(SolutionDir)Res\[OnDemand]\$(InputName).monad-tex"
+			FileExtensions="*.dds"
+			>
+      <Properties>
+      </Properties>
+    </CustomBuildRule>
+    <CustomBuildRule
+			Name="XML"
+			DisplayName="XML compiler"
+			CommandLine="&quot;$(SolutionDir)Encrypt.exe&quot; &quot;$(InputPath)&quot; &quot;$(SolutionDir)Res\[ConstsDest]\$(InputName).monad-db&quot; &quot;$(SolutionDir)Bin\bzip2.exe&quot; nop"
+			Outputs="$(SolutionDir)Res\[ConstsDest]\$(InputName).monad-db"
+			FileExtensions="*.xml"
+			>
+      <Properties>
+        <EnumProperty
+          Name="ConstsDest"
+          DisplayName="Constant Destination"
+          Description="Sets desired destination"
+					>
+          <Values>
+            <EnumValue
+              Value="0"
+              Switch="Once"
+              DisplayName="Once"
+						/>
+            <EnumValue
+              Value="1"
+              Switch="DX11"
+              DisplayName="DX11"
+						/>
+            <EnumValue
+              Value="2"
+              Switch="Stream"
+              DisplayName="Stream"
+						/>
+          </Values>
+        </EnumProperty>
+      </Properties>
+    </CustomBuildRule>
+    <CustomBuildRule
+			Name="wav"
+			DisplayName="wave compiler"
+			CommandLine="&quot;$(SolutionDir)CmdScripts\wav.cmd&quot;
+      [AudioFormat]
+      &quot;$(InputPath)&quot;
+      &quot;$(SolutionDir)Tmp\$(InputName).$$$&quot;
+      &quot;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\xWMAEncode.exe&quot;
+      &quot;$(SolutionDir)Encrypt.exe&quot;
+      &quot;$(SolutionDir)Res\[AudioDest]\$(InputName).[AudioExt]&quot; 
+      &quot;$(SolutionDir)Bin\bzip2.exe&quot;
+      nop"
+			Outputs="$(SolutionDir)Res\[AudioDest]\$(InputName).[AudioExt]"
+			FileExtensions="*.wav"
+			>
+      <Properties>
+        <EnumProperty
+					Name="AudioFormat"
+					DisplayName="Waves&apos;s Format"
+					Description="Sets desired wave formst"
+					>
+          <Values>
+            <!--<EnumValue
+              Value="0"
+              Switch="1"
+              DisplayName="Wave format"
+						/>-->
+            <EnumValue
+              Value="1"
+              Switch="2"
+              DisplayName="xWMA format"
+						/>
+          </Values>
+        </EnumProperty>
+        <EnumProperty
+          Name="AudioDest"
+          DisplayName="Audio Destination"
+          Description="Sets desired destination and usage"
+					>
+          <Values>
+            <EnumValue
+              Value="0"
+              Switch="Clock"
+              DisplayName="Clock"
+						/>
+            <EnumValue
+              Value="1"
+              Switch="Stream"
+              DisplayName="Stream"
+						/>
+            <EnumValue
+              Value="2"
+              Switch="Config"
+              DisplayName="Config"
+						/>
+          </Values>
+        </EnumProperty>
+        <EnumProperty
+          Name="AudioExt"
+          DisplayName="Audio Semantics"
+          Description="Set Extension"
+					>
+          <Values>
+            <EnumValue
+              Value="0"
+              Switch="monad-snd"
+              DisplayName="Beep"
+						/>
+            <EnumValue
+              Value="1"
+              Switch="monad-strm"
+              DisplayName="Stream"
+						/>
+          </Values>
+        </EnumProperty>
+      </Properties>
+    </CustomBuildRule>
+    <CustomBuildRule
+			Name="Vbs2Vbe"
+			DisplayName="VBS compiler"
+			CommandLine="&quot;$(SolutionDir)CmdScripts\vbe.cmd&quot; &quot;$(SolutionDir)Bin\screnc.exe&quot; &quot;$(InputPath)&quot; &quot;$(InputDir)$(InputName).vbe&quot;"
+			Outputs="$(InputDir)$(InputName).vbe"
+			FileExtensions="*.vbs"
+			>
+      <Properties>
+      </Properties>
+    </CustomBuildRule>
+    <CustomBuildRule
+			Name="Mesh"
+			DisplayName="SDK Mesh creator"
+			CommandLine="&quot;$(SolutionDir)CmdScripts\mesh.cmd&quot;           &quot;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86\MeshConvert.exe&quot;           &quot;$(InputPath)&quot;           &quot;$(SolutionDir)Res\[OnDemand]\$(InputName).sdkmesh&quot;           &quot;$(SolutionDir)Encrypt.exe&quot;           &quot;$(SolutionDir)Res\[OnDemand]\$(InputName).sdkmesh&quot;           &quot;$(SolutionDir)Res\[OnDemand]\$(InputName).monad-mesh&quot;           &quot;$(SolutionDir)Bin\bzip2.exe&quot;"
+			Outputs="$(SolutionDir)Res\[OnDemand]\$(InputName).monad-mesh"
+			FileExtensions="*.x"
+			>
+      <Properties>
+        <EnumProperty
+          Name="OnDemand"
+          DisplayName="On-demand Destination"
+          Description="Sets desired destination and usage"
+					>
+          <Values>
+            <EnumValue
+              Value="0"
+              Switch="Auto"
+              DisplayName="Auto"
+						/>
+            <EnumValue
+              Value="1"
+              Switch="Jesus"
+              DisplayName="Jesus"
+						/>
+            <EnumValue
+              Value="2"
+              Switch="Girl"
+              DisplayName="Girl"
+						/>
+            <EnumValue
+              Value="3"
+              Switch="Ostap"
+              DisplayName="Ostap"
+						/>
+            <EnumValue
+              Value="4"
+              Switch="Landscape"
+              DisplayName="Landscape"
+						/>
+            <EnumValue
+              Value="5"
+              Switch="Napoleon"
+              DisplayName="Napoleon"
+						/>
+            <EnumValue
+              Value="6"
+              Switch="Adam"
+              DisplayName="Adam"
+						/>
+          </Values>
+        </EnumProperty>
+      </Properties>
+    </CustomBuildRule>
+  </Rules>
+</VisualStudioToolFile>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XML_DIZ_INFO>
+	<MASTER_PAD_VERSION_INFO>
+		<MASTER_PAD_VERSION>3.11</MASTER_PAD_VERSION>
+		<MASTER_PAD_EDITOR>PADGen 3.1.1.47 http://www.padgen.org</MASTER_PAD_EDITOR>
+	</MASTER_PAD_VERSION_INFO>
+	<Company_Info>
+		<Company_Name>www.kubera.info</Company_Name>
+		<Address_1 />
+		<Address_2 />
+		<City_Town>Warsaw</City_Town>
+		<State_Province />
+		<Zip_Postal_Code />
+		<Country>Poland</Country>
+		<Company_WebSite_URL>http://www.kubera.info</Company_WebSite_URL>
+		<Contact_Info>
+			<Author_First_Name>Włodzimierz</Author_First_Name>
+			<Author_Last_Name>Kubera</Author_Last_Name>
+			<Author_Email>wlodzimierz@kubera.info</Author_Email>
+			<Contact_First_Name>Włodzimierz</Contact_First_Name>
+			<Contact_Last_Name>Kubera</Contact_Last_Name>
+			<Contact_Email>wlodzimierz@kubera.info</Contact_Email>
+		</Contact_Info>
+		<Support_Info>
+			<Sales_Email>wlodzimierz@kubera.info</Sales_Email>
+			<Support_Email>wlodzimierz@kubera.info</Support_Email>
+			<General_Email>wlodzimierz@kubera.info</General_Email>
+			<Sales_Phone />
+			<Support_Phone />
+			<General_Phone />
+			<Fax_Phone />
+		</Support_Info>
+	</Company_Info>
+	<Program_Info>
+		<Program_Name>Old Polish Clock</Program_Name>
+		<Program_Version>3.0.0.1</Program_Version>
+		<Program_Release_Month>11</Program_Release_Month>
+		<Program_Release_Day>05</Program_Release_Day>
+		<Program_Release_Year>2011</Program_Release_Year>
+		<Program_Cost_Dollars />
+		<Program_Cost_Other_Code />
+		<Program_Cost_Other />
+		<Program_Type>Freeware</Program_Type>
+		<Program_Release_Status>New Release</Program_Release_Status>
+		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
+		<Program_OS_Support>Win7 x32,Win7 x64,WinVista,WinVista x64,WinXP</Program_OS_Support>
+		<Program_Language>English,Polish,Russian</Program_Language>
+		<Program_Change_Info />
+		<Program_Specific_Category>Screen Savers</Program_Specific_Category>
+		<Program_Category_Class>Desktop::Screen Savers: Other</Program_Category_Class>
+		<Program_System_Requirements>Shader Model 3.0</Program_System_Requirements>
+		<File_Info>
+			<File_Size_Bytes>60000</File_Size_Bytes>
+			<File_Size_K>58</File_Size_K>
+			<File_Size_MB>0.06</File_Size_MB>
+		</File_Info>
+		<Expire_Info>
+			<Has_Expire_Info>N</Has_Expire_Info>
+			<Expire_Count />
+			<Expire_Based_On>Days</Expire_Based_On>
+			<Expire_Other_Info />
+			<Expire_Month />
+			<Expire_Day />
+			<Expire_Year />
+		</Expire_Info>
+	</Program_Info>
+	<Program_Descriptions>
+		<English>
+			<Keywords>Clock Screen Saver 3D</Keywords>
+			<Char_Desc_45>The „Old Polish Clock” Screen Saver</Char_Desc_45>
+			<Char_Desc_80>Our model is a replica from the turning point of XIX and XX century.</Char_Desc_80>
+			<Char_Desc_250 />
+			<Char_Desc_450 />
+			<Char_Desc_2000 />
+		</English>
+		<Polish>
+			<Keywords>Wygaszacz Ekranu Zegar 3D 3W</Keywords>
+			<Char_Desc_45>Wygaszacz Ekranu „Stary Polski Zegar”</Char_Desc_45>
+			<Char_Desc_80>Model jest repliką czasomierza z przełomu XIX i XX wieku.</Char_Desc_80>
+			<Char_Desc_250 />
+			<Char_Desc_450 />
+			<Char_Desc_2000 />
+		</Polish>
+		<Russian>
+			<Keywords>Экранная Заставка Часы 3D</Keywords>
+			<Char_Desc_45>Экранная Заставка „Старинные Польские Часы”</Char_Desc_45>
+			<Char_Desc_80>Модель часов с XIX и XX веков.</Char_Desc_80>
+			<Char_Desc_250 />
+			<Char_Desc_450 />
+			<Char_Desc_2000 />
+		</Russian>
+	</Program_Descriptions>
+	<Web_Info>
+		<Application_URLs>
+			<Application_Info_URL>http://screensaver.kubera.info/</Application_Info_URL>
+			<Application_Order_URL />
+			<Application_Screenshot_URL>http://screensaver.kubera.info/obrazy/zegar-3-640x480.png</Application_Screenshot_URL>
+			<Application_Icon_URL>http://kubera.info/obrazy/Clock3_48x48.png</Application_Icon_URL>
+			<Application_XML_File_URL>http://kubera.info/xml/opc3.0.xml</Application_XML_File_URL>
+		</Application_URLs>
+		<Download_URLs>
+			<Primary_Download_URL>http://screensaver.kubera.info/download/OldPolishClockSetup3.0.exe</Primary_Download_URL>
+			<Secondary_Download_URL />
+			<Additional_Download_URL_1 />
+			<Additional_Download_URL_2 />
+		</Download_URLs>
+	</Web_Info>
+	<Permissions>
+		<Distribution_Permissions />
+		<EULA />
+	</Permissions>
+</XML_DIZ_INFO>

@@ -1,0 +1,22 @@
+#pragma once
+#ifndef _MONAD_MATRICES_H_
+#define _MONAD_MATRICES_H_
+
+#include "MonadMath.h"
+
+extern XMVECTOR vUpVec;
+extern XMMATRIX PROJECTION_MATRIX;
+extern XMMATRIX VIEW_MATRIX;
+extern XMMATRIX WORLD_MATRIX;
+extern XMMATRIX WORLDVIEW_MATRIX;
+extern XMMATRIX WORLDVIEWPROJECTION_MATRIX;
+extern XMMATRIX texScaleBiasMat;
+extern XMMATRIX SHADOW_TEX_MATRIX;
+extern XMMATRIX SHADOW_TEX_MATRIX0;
+extern XMMATRIX SHADOW_TEX_MATRIX1;
+extern XMMATRIX SHADOW_TEX_MATRIX2;
+
+extern float dx;
+extern float dy;
+
+#endif;
