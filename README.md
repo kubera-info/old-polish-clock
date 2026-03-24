@@ -1,2 +1,2 @@
 # old-polish-clock
-The Old Polish Clock Screensaver
+The „Old Polish Clock” screen saver
